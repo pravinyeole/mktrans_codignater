@@ -58,7 +58,7 @@
                 <a href="<?= site_url('index.php/frontend/services');?>" class="nav-item nav-link">Services</a>
                 <a href="<?= site_url('index.php/frontend/contact');?>" class="nav-item nav-link">Contact</a>
             </div>
-            <h4 class="m-0 pe-lg-5 d-none d-lg-block"><i class="fa fa-headphones text-primary me-3"></i>+91 75885 00000</h4>
+            <h4 class="m-0 pe-lg-5 d-none d-lg-block"><i class="fa fa-headphones text-primary me-3"></i>+91 75885 54482</h4>
         </div>
     </nav>
     <!-- Navbar End -->
