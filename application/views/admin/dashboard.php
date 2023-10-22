@@ -13,11 +13,16 @@
     <link id="pagestyle" href="<?= site_url('assets/css/admin/argon-dashboard.min.css') ?>" rel="stylesheet" />
 </head>
 
-<body class="g-sidenav-show   bg-gray-100">
-
+<body class="g-sidenav-show bg-gray-100">
     <div class="min-height-300 bg-primary position-absolute w-100"></div>
-    <aside class="sidenav bg-white navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-4 " id="sidenav-main">
+    <aside class="sidenav bg-white navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-4" id="sidenav-main">
         <hr class="horizontal dark mt-0">
+        <div class="sidenav-header">
+            <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-xl-none" aria-hidden="true" id="iconSidenav">X</i>
+            <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/argon-dashboard/pages/dashboard.html " target="_blank">
+                <span class="ms-1 font-weight-bold">Argon Dashboard 2</span>
+            </a>
+        </div>
         <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -416,6 +421,10 @@
             </footer>
         </div>
     </main>
-    <script src="<?= site_url('assets/js/admin/js/argon-dashboard.min.js')?>"></script>
+    <script src="<?= site_url('assets/plugins/perfect-scrollbar.min.js') ?>"></script>
+    <script src="<?= site_url('assets/plugins/smooth-scrollbar.min.js') ?>"></script>
+    <script async defer src="<?= site_url('assets/plugins/buttons.js') ?>"></script>
+    <script src="<?= site_url('assets/js/admin/js/argon-dashboard.min.js') ?>"></script>
 </body>
+
 </html>
