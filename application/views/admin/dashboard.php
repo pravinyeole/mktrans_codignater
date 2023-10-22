@@ -19,8 +19,8 @@
         <hr class="horizontal dark mt-0">
         <div class="sidenav-header">
             <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-xl-none" aria-hidden="true" id="iconSidenav">X</i>
-            <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/argon-dashboard/pages/dashboard.html " target="_blank">
-                <span class="ms-1 font-weight-bold">Argon Dashboard 2</span>
+            <a class="m-0" href=" https://demos.creative-tim.com/argon-dashboard/pages/dashboard.html " target="_blank">
+                <img src="<?= site_url('assets/img/logo.png') ?>" class="navbar-brand-img h-100" alt="main_logo" >
             </a>
         </div>
         <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
