@@ -1,4 +1,8 @@
 <?php include("header.php") ?>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5" style="margin-bottom: 6rem;">
         <div class="container py-5">
@@ -23,8 +27,12 @@
                     <h6 class="text-secondary text-uppercase">Get In Touch</h6>
                     <h1 class="mb-4">Request A Free Qoute!</h1>
                     <p class="mb-4">Are you ready to experience hassle-free transportation solutions with Mk Transport Company? Get started by requesting a free, no-obligation quote today! We're here to provide you with competitive pricing and personalized service tailored to your specific needs.</p>
+                    <?php if($this->session->flashdata('msg')): ?>
+                        <p style="color:green;"><?php echo $this->session->flashdata('msg'); ?></p>
+                    <?php endif; ?>
                     <div class="bg-light p-4">
-                        <form method="post" action="#">
+                    
+                        <form method="post" action="<?= site_url('index.php/Quote/quote_insert') ?>">
                             <div class="row g-3">
                                 <div class="col-12 col-sm-6">
                                     <input type="text" class="form-control border-0" name="company_name" placeholder="Your Company Name" style="height: 55px;" required>
@@ -36,7 +44,7 @@
                                     <input type="email" class="form-control border-0" name="email" placeholder="Your Email" style="height: 55px;" required>
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control border-0" name="mobile_number" placeholder="Your Mobile" style="height: 55px;" onkeypress="return onlyNumberKey(event)" required pattern="[0-9]{10}">
+                                    <input type="text" class="form-control border-0" name="mobile_number" placeholder="Your Mobile Number" style="height: 55px;" onkeypress="return onlyNumberKey(event)" required pattern="[0-9]{10}">
                                 </div>
                                 <div class="col-12 col-sm-6">
                                     <input type="text" class="form-control border-0" name="to_location" placeholder="My Location" style="height: 55px;" required>

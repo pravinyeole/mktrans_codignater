@@ -252,7 +252,7 @@
                 </div>
                 <div class="col-lg-7">
                     <div class="bg-light text-center p-5 wow fadeIn" data-wow-delay="0.5s">
-                        <form method="post" action="#">
+                        <form method="post" action="<?= site_url('index.php/Quote/quote_insert') ?>">
                             <div class="row g-3">
                                 <div class="col-12 col-sm-6">
                                     <input type="text" class="form-control border-0" name="company_name" placeholder="Your Company Name" style="height: 55px;" required>
