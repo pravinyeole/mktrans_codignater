@@ -16,14 +16,19 @@
 			$username = $this->input->post('username');
 			$userpass = $this->input->post('userpass');
 			
-			if((isset($username) && $username !== null) && (isset($userpass) && $userpass !== null)){
+			// if((isset($username) && $username !== null) && (isset($userpass) && $userpass !== null)){
 
-			}else{
+			// }else{
 
-			}
+			// }
+			$this->load->view('admin/dashboard');
 		}
 		function dashboard(){
 			$this->load->view('admin/dashboard');
+		}
+
+		function Create_qoute(){
+			$this->load->view('admin/quotation_form');
 		}
 		
 	}

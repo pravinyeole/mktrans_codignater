@@ -14,10 +14,6 @@
                 <div class="card-body">
                     <div class="card">
                         <a href="{{url('/quotaion_view')}}">view</a>
-          
-                        
-                           
-
                         
                       
             </div>
