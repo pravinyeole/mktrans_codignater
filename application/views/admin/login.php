@@ -117,14 +117,22 @@ body {
 </head>
 <body>
     <div class="login-form">
-        <form action="<?php echo site_url('admin/logincheck') ?>" method="post">
+      
+        <form action="<?php echo site_url('index.php/admin/logincheck') ?>" method="post">
+            <?php  
+              if(!empty($success_msg)){ 
+                  echo '<p class="status-msg success">'.$success_msg.'</p>'; 
+              }elseif(!empty($error_msg)){ 
+                  echo '<p class="status-msg error">'.$error_msg.'</p>'; 
+              } 
+          ?>
             <h1>Login</h1>
             <div class="content">
                 <div class="input-field">
-                    <input type="text" name="username" placeholder="9999999999" autocomplete="nope" required>
+                    <input type="email" name="username" placeholder="Email id" autocomplete="nope" required>
                 </div>
                 <div class="input-field">
-                    <input type="password" name="userpass" placeholder="Password" autocomplete="new-password" required>
+                    <input type="password" name="password" placeholder="Password" autocomplete="new-password" required>
                 </div>
             </div>
             <div class="action">

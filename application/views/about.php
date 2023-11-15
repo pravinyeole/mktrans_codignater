@@ -161,7 +161,7 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="team-item p-4">
                         <div class="overflow-hidden mb-4">
-                            <img class="img-fluid" src="img/team-2.jpg" alt="">
+                            <img class="img-fluid" src="<?php echo base_url("img/team-2.jpg");?>" alt="">
                         </div>
                         <h5 class="mb-0">Full Name</h5>
                         <p>Designation</p>
