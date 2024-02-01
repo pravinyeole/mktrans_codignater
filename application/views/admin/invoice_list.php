@@ -14,6 +14,13 @@
                                     <th style="text-align:center;">Mobile Number</th>
                                     <th style="text-align:center;">Address</th>
                                     <th style="text-align:center;">Download</th>
+                                    <?php 
+                                    if($status == 'active')
+                                    {
+                                        echo '<th style="text-align:center;">Delete</th>';
+                                    }
+                                    ?>
+                                    
                                 </tr>
                             </thead>
                             <tbody>
@@ -27,7 +34,14 @@
                                     <td><?= $val->company_name; ?></td>
                                     <td><?= $val->mobile; ?></td>
                                     <td><?= $val->address; ?></td>
-                                    <td><a href="<?= site_url('index.php/Admin/view_invoice/').'/'.$val->id ?>" class="btn btn-primary">View</a></td>
+                                    <td><a href="<?= site_url('index.php/Admin/view_invoice/').'/'.$val->id ?>" class="btn btn-primary">Download</a></td>
+                                    
+                                    <?php 
+                                    if($status == 'active')
+                                    {?>
+                                        <td><a href="<?= site_url('index.php/Admin/delete_invoice/').'/'.$val->id ?>" class="btn btn-danger">Delete</a></td>
+                                    <?php }
+                                    ?>
                                 </tr>
                                 
                             <?php

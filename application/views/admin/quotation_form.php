@@ -14,7 +14,7 @@
                         <form method="post" action="<?= site_url('index.php/Admin/submit_quotation_form') ?>" style="margin:20px;">
                             <div class="row">
                                 <div class="col">
-                                    <label for="companyname">Quotation Date</label>
+                                    <label for="companyname">Quotation Date</label><spam class="imp">*</span>
                                     <div class="input-group date datepicker" data-provide="datepicker">
                                         <input type="text" class="form-control" name="date" placeholder="Please Select Date" required>
                                         <div class="input-group-addon">
@@ -23,31 +23,31 @@
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <label for="companyname">Company Name</label>
+                                    <label for="companyname">Company Name</label><spam class="imp">*</span>
                                     <input type="text" class="form-control" name="companyname" placeholder="Please Enter Company Name" required>
                                 </div>
                                 <div class="col">
-                                    <label for="mobilenumber">Mobile Number</label>
+                                    <label for="mobilenumber">Mobile Number</label><spam class="imp">*</span>
                                     <input type="text" class="form-control" name="mobilenumber" placeholder="Please Enter Mobile Number" required>
                                 </div>
                                 <div class="col">
-                                    <label for="exampleFormControlTextarea1">Address  </label>
+                                    <label for="exampleFormControlTextarea1">Address  </label><spam class="imp">*</span>
                                     <textarea class="form-control" name="address" rows="2"></textarea>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col">
-                                    <label for="route1">Route From</label>
+                                    <label for="route1">Route From</label><spam class="imp">*</span>
                                     <input type="text" class="form-control" name="route1[]" placeholder="Please Enter Route From" required>
                                 </div>
 
                                 <div class="col">
-                                    <label for="route2">Route To</label>
+                                    <label for="route2">Route To</label><spam class="imp">*</span>
                                     <input type="text" class="form-control" name="route2[]" placeholder="Please Enter Route To" required>
                                 </div>
 
                                 <div class="col">
-                                    <label for="exampleFormControlSelect2">Vehicle Type</label>
+                                    <label for="exampleFormControlSelect2">Vehicle Type</label><spam class="imp">*</span>
                                     <select class="form-control" name="vehical_type[]">
                                         <?php foreach($data as $key=>$value)
                                         {
@@ -60,17 +60,17 @@
                             </div>
                             <div class="row">
                                 <div class="col">
-                                    <label for="loading">Loading Point</label>
+                                    <label for="loading">Loading Point</label><spam class="imp">*</span>
                                     <input type="text" class="form-control" name="loading[]" placeholder="Please Enter Loading Point" required>
                                 </div>
 
                                 <div class="col">
-                                    <label for="unloading">Unloading Point</label>
+                                    <label for="unloading">Unloading Point</label><spam class="imp">*</span>
                                     <input type="text" class="form-control" name="unloading[]" placeholder="Please Enter Material Weight" required>
                                 </div>
                                  
                                 <div class="col">
-                                    <label for="unloading">Amount</label>
+                                    <label for="unloading">Amount</label><spam class="imp">*</span>
                                     <input type="text" class="form-control" name="amount[]" placeholder="Please Enter Material Weight" required>
                                 </div>
 

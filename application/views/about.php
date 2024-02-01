@@ -1,217 +1,253 @@
 <?php include("header.php") ?>
-    <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5" style="margin-bottom: 6rem;">
-        <div class="container py-5">
-            <h1 class="display-3 text-white mb-3 animated slideInDown">About Us</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-white active" aria-current="page">About</li>
-                </ol>
-            </nav>
+    <!-- Banner -->
+    <section role="banner">
+        <div class="innerBanner">
+            <img src="<?= site_url('assets/img/inner-about-banner.jpg')?>" alt="Services" class="img-fluid w-100" />
+            <div class="caption">
+                <div class="container"><h1>About os</h1></div>
+            </div>
         </div>
-    </div>
-    <!-- Page Header End -->
-
-
+    </section>
+    <!-- Banner End -->
     <!-- About Start -->
-    <div class="container-fluid overflow-hidden py-5 px-lg-0">
+    <div class="container overflow-hidden py-5 px-lg-0">
         <div class="container about py-5 px-lg-0">
             <div class="row g-5 mx-lg-0">
-                <div class="col-lg-6 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/about.jpg" style="object-fit: cover;" alt="">
+                <div class="col-lg-7 about-text wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="pe-4 dark-text">
+                    <h3 class="f20 font-weight-400">YOUR RELIABLE MOVING PARTNER SINCE 2019</h3>
+                    <h1 class="mb-5 f40 font-weight-900 text-uppercase">MK Transport Company</h1>
+                    <p>At MK Transport Company, we're passionate about making journeys memorable, reliable, and hassle-free. With a deep-rooted commitment to excellence, we've been your trusted transportation partner for 5 years and counting.</p>
+                            <p>Our dedicated team of movers and packers are highly trained and committed to ensuring the safety of your belongings. We handle your possessions with care and attention to detail. As an international moving company, we have established a all over india network of partners and affiliates. This means we can efficiently manage your move to and from virtually anywhere in the India. We understand that every move is unique. We work closely with you to create a customized moving plan that suits your specific requirements and budget.</p>
+                            <p class="mb-5">Our pricing is transparent and competitive. You will receive a detailed estimate upfront, so you know exactly what to expect, with no hidden costs.</p>
                     </div>
                 </div>
-                <div class="col-lg-6 about-text wow fadeInUp" data-wow-delay="0.3s">
-                    <h6 class="text-secondary text-uppercase mb-3">About Us</h6>
-                    <h1 class="mb-5">Quick Transport and Logistics Solutions</h1>
-                    <p class="mb-5">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                    <div class="row g-4 mb-5">
-                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
-                            <i class="fa fa-globe fa-3x text-primary mb-3"></i>
-                            <h5>Global Coverage</h5>
-                            <p class="m-0">Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam justo.</p>
-                        </div>
-                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.7s">
-                            <i class="fa fa-shipping-fast fa-3x text-primary mb-3"></i>
-                            <h5>On Time Delivery</h5>
-                            <p class="m-0">Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam justo.</p>
-                        </div>
+                <div class="col-lg-5 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100 about-img">
+                        <img class="position-absolute img-fluid w-100 h-100" src="<?= site_url('assets/img/portrait-delivery-man-waiting-customer.jpg')?>" style="object-fit: cover;" alt="">
                     </div>
-                    <a href="" class="btn btn-primary py-3 px-5">Explore More</a>
                 </div>
             </div>
         </div>
     </div>
     <!-- About End -->
-
-
-    <!-- Fact Start -->
-    <div class="container-xxl py-5">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="text-secondary text-uppercase mb-3">Some Facts</h6>
-                    <h1 class="mb-5">#1 Place To Manage All Of Your Shipments</h1>
-                    <p class="mb-5">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                    <div class="d-flex align-items-center">
-                        <i class="fa fa-headphones fa-2x flex-shrink-0 bg-primary p-3 text-white"></i>
-                        <div class="ps-4">
-                            <h6>Call for any query!</h6>
-                            <h3 class="text-primary m-0">+012 345 6789</h3>
+    <!-- Vision mission -->
+    <section role="about">
+        <div class="container-fluid vision-bg">
+            <div class="section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-4 wow fadeInUp">
+                            <h3>OUR VISION</h3>
+                            <p>To be the most admired logistics provider, inspired and driven by values integrated into everything we do. Our decisions and actions guided by the interest of our clients, employees, shareholders and social obligation equally</p>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="row g-4 align-items-center">
-                        <div class="col-sm-6">
-                            <div class="bg-primary p-4 mb-4 wow fadeIn" data-wow-delay="0.3s">
-                                <i class="fa fa-users fa-2x text-white mb-3"></i>
-                                <h2 class="text-white mb-2" data-toggle="counter-up">1234</h2>
-                                <p class="text-white mb-0">Happy Clients</p>
-                            </div>
-                            <div class="bg-secondary p-4 wow fadeIn" data-wow-delay="0.5s">
-                                <i class="fa fa-ship fa-2x text-white mb-3"></i>
-                                <h2 class="text-white mb-2" data-toggle="counter-up">1234</h2>
-                                <p class="text-white mb-0">Complete Shipments</p>
-                            </div>
+                        <div class="col-12 col-lg-4 wow fadeInUp">
+                            <h3>OUR MISSION</h3>
+                            <p>To deliver the finest client experience through utmost quality, cost-effective and excellent client service. Achieving the goal by understanding each client’s journey and making it exceptional with our commitment.</p>
                         </div>
-                        <div class="col-sm-6">
-                            <div class="bg-success p-4 wow fadeIn" data-wow-delay="0.7s">
-                                <i class="fa fa-star fa-2x text-white mb-3"></i>
-                                <h2 class="text-white mb-2" data-toggle="counter-up">1234</h2>
-                                <p class="text-white mb-0">Customer Reviews</p>
-                            </div>
+                        <div class="col-12 col-lg-4 wow fadeInUp">
+                            <h3>OUR VALUES</h3>
+                            <ul>
+                                <li><div class="icon">
+                                    <i class="fa fa-check"></i>
+                                </div>CLIENT SERVICE</li>
+                                <li><div class="icon">
+                                    <i class="fa fa-check"></i>
+                                </div>TRUSTWORTHY</li>
+                                <li><div class="icon">
+                                    <i class="fa fa-check"></i>
+                                </div>INNOVATION</li>
+                                <li><div class="icon">
+                                    <i class="fa fa-check"></i>
+                                </div>STRIVE FOR EXCELLENCE</li>
+                                <li><div class="icon">
+                                    <i class="fa fa-check"></i>
+                                </div>TRANSPARENT</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Fact End -->
-
-
-    <!-- Feature Start -->
-    <div class="container-fluid overflow-hidden py-5 px-lg-0">
-        <div class="container feature py-5 px-lg-0">
+    </section>
+    <!-- Vision mission End -->
+    <!-- About Start -->
+    <div class="container overflow-hidden py-5 px-lg-0">
+        <div class="container about py-5 px-lg-0">
             <div class="row g-5 mx-lg-0">
-                <div class="col-lg-6 feature-text wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="text-secondary text-uppercase mb-3">Our Features</h6>
-                    <h1 class="mb-5">We Are Trusted Logistics Company Since 1990</h1>
-                    <div class="d-flex mb-5 wow fadeInUp" data-wow-delay="0.3s">
-                        <i class="fa fa-globe text-primary fa-3x flex-shrink-0"></i>
-                        <div class="ms-4">
-                            <h5>Worldwide Service</h5>
-                            <p class="mb-0">Diam dolor ipsum sit amet eos erat ipsum lorem sed stet lorem sit clita duo justo magna erat amet</p>
-                        </div>
-                    </div>
-                    <div class="d-flex mb-5 wow fadeIn" data-wow-delay="0.5s">
-                        <i class="fa fa-shipping-fast text-primary fa-3x flex-shrink-0"></i>
-                        <div class="ms-4">
-                            <h5>On Time Delivery</h5>
-                            <p class="mb-0">Diam dolor ipsum sit amet eos erat ipsum lorem sed stet lorem sit clita duo justo magna erat amet</p>
-                        </div>
-                    </div>
-                    <div class="d-flex mb-0 wow fadeInUp" data-wow-delay="0.7s">
-                        <i class="fa fa-headphones text-primary fa-3x flex-shrink-0"></i>
-                        <div class="ms-4">
-                            <h5>24/7 Telephone Support</h5>
-                            <p class="mb-0">Diam dolor ipsum sit amet eos erat ipsum lorem sed stet lorem sit clita duo justo magna erat amet</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 pe-lg-0 wow fadeInRight" data-wow-delay="0.1s" style="min-height: 400px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/feature.jpg" style="object-fit: cover;" alt="">
+                <div class="col-lg-12 about-text wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="pe-4 dark-text">
+                        <h1 class="mb-5 f32 font-weight-900 text-uppercase">Begin Your Journey with MK Transport and “Experience the Best”</h1>
+                        <p>While moving internationally may seem overwhelming, it does not have to be. Let MK Transport take the stress out of your move. Reach out to us today for a complimentary consultation, and one of our amiable representatives will assist you in navigating the process, offering you a tailored moving strategy.</p>
+                        <p>At MK Transport, we understand that we are not just relocating your possessions; we are facilitating the relocation of your emotions and memories. Place your trust in us to ensure your international move is a seamless and memorable journey.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Feature End -->
-
-
-    <!-- Team Start -->
-    <div class="container-xxl py-5">
+    <!-- About End -->
+<!-- Testimonial Start -->
+<div class="bg-light">
+    <div class="container-xxl py-5 wow fadeInUp bg-light" data-wow-delay="0.1s">
         <div class="container py-5">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="text-secondary text-uppercase">Our Team</h6>
-                <h1 class="mb-5">Expert Team Members</h1>
+            <div class="text-center">
+                <h6 class="text-primary text-uppercase mb-3 f18 font-weight-400">Testimonial</h6>
+                <h2 class="mb-5 f30 font-weight-900 text-capitalize text-center wow fadeInUp">What our Clients says</h2>
             </div>
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item p-4">
-                        <div class="overflow-hidden mb-4">
-                            <img class="img-fluid" src="img/team-1.jpg" alt="">
-                        </div>
-                        <h5 class="mb-0">Full Name</h5>
-                        <p>Designation</p>
-                        <div class="btn-slide mt-1">
-                            <i class="fa fa-share"></i>
-                            <span>
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-twitter"></i></a>
-                                <a href=""><i class="fab fa-instagram"></i></a>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                <div class="testimonial-item p-4 my-5">
+                    <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
+                    <div class="mb-4">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ea, repellat velit enim aliquid maxime non! Tempore molestias mollitia culpa blanditiis impedit dolore eaque cum assumenda delectus, sint iusto ipsam?</p>
+                        <div class="d-flex align-items-center gap-3 justify-content-start">
+                            <span class="d-block rounded-50 overflow-hidden" style="width: 60px; height: 60px;padding: 12px;background: #fff;border: 1px solid #929292;">
+                                <img class="img-fluid flex-shrink-0" src="<?= site_url('assets/img/c1.jpg')?>">
                             </span>
+                            <div>
+                                <h5 class="mb-1 f17">Mahindra EPC Irrigation Limited</h5>
+                                <div class="start-rating d-flex gap-1 mt-2">
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item p-4">
-                        <div class="overflow-hidden mb-4">
-                            <img class="img-fluid" src="<?php echo base_url("img/team-2.jpg");?>" alt="">
-                        </div>
-                        <h5 class="mb-0">Full Name</h5>
-                        <p>Designation</p>
-                        <div class="btn-slide mt-1">
-                            <i class="fa fa-share"></i>
-                            <span>
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-twitter"></i></a>
-                                <a href=""><i class="fab fa-instagram"></i></a>
+                <div class="testimonial-item p-4 my-5">
+                    <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
+                    <div class="mb-4">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ea, repellat velit enim aliquid maxime non! Tempore molestias mollitia culpa blanditiis impedit dolore eaque cum assumenda delectus, sint iusto ipsam?</p>
+                        <div class="d-flex align-items-center gap-3 justify-content-start">
+                            <span class="d-block rounded-50 overflow-hidden" style="width: 60px; height: 60px;padding: 12px;background: #fff;border: 1px solid #929292;">
+                                <img class="img-fluid flex-shrink-0" src="<?= site_url('assets/img/c2.jpg')?>">
                             </span>
+                            <div>
+                                <h5 class="mb-1 f17">Garware Technical Fibres Limited</h5>
+                                <div class="start-rating d-flex gap-1 mt-2">
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item p-4">
-                        <div class="overflow-hidden mb-4">
-                            <img class="img-fluid" src="img/team-3.jpg" alt="">
-                        </div>
-                        <h5 class="mb-0">Full Name</h5>
-                        <p>Designation</p>
-                        <div class="btn-slide mt-1">
-                            <i class="fa fa-share"></i>
-                            <span>
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-twitter"></i></a>
-                                <a href=""><i class="fab fa-instagram"></i></a>
+                <div class="testimonial-item p-4 my-5">
+                    <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
+                    <div class="mb-4">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ea, repellat velit enim aliquid maxime non! Tempore molestias mollitia culpa blanditiis impedit dolore eaque cum assumenda delectus, sint iusto ipsam?</p>
+                        <div class="d-flex align-items-center gap-3 justify-content-start">
+                            <span class="d-block rounded-50 overflow-hidden" style="width: 60px; height: 60px;padding: 12px;background: #fff;border: 1px solid #929292;">
+                                <img class="img-fluid flex-shrink-0" src="<?= site_url('assets/img/c3.jpg')?>">
                             </span>
+                            <div>
+                                <h5 class="mb-1 f17">Tritech Disconnecters IND Pvt Ltd</h5>
+                                <div class="start-rating d-flex gap-1 mt-2">
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.9s">
-                    <div class="team-item p-4">
-                        <div class="overflow-hidden mb-4">
-                            <img class="img-fluid" src="img/team-4.jpg" alt="">
-                        </div>
-                        <h5 class="mb-0">Full Name</h5>
-                        <p>Designation</p>
-                        <div class="btn-slide mt-1">
-                            <i class="fa fa-share"></i>
-                            <span>
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-twitter"></i></a>
-                                <a href=""><i class="fab fa-instagram"></i></a>
+                <div class="testimonial-item p-4 my-5">
+                    <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
+                    <div class="mb-4">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ea, repellat velit enim aliquid maxime non! Tempore molestias mollitia culpa blanditiis impedit dolore eaque cum assumenda delectus, sint iusto ipsam?</p>
+                        <div class="d-flex align-items-center gap-3 justify-content-start">
+                            <span class="d-block rounded-50 overflow-hidden" style="width: 60px; height: 60px;padding: 12px;background: #fff;border: 1px solid #929292;">
+                                <img class="img-fluid flex-shrink-0" src="<?= site_url('assets/img/c4.jpg')?>">
                             </span>
+                            <div>
+                                <h5 class="mb-1 f17">Sahyadri Farms</h5>
+                                <div class="start-rating d-flex gap-1 mt-2">
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                </div>
+
+                <div class="testimonial-item p-4 my-5">
+                    <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
+                    <div class="mb-4">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ea, repellat velit enim aliquid maxime non! Tempore molestias mollitia culpa blanditiis impedit dolore eaque cum assumenda delectus, sint iusto ipsam?</p>
+                        <div class="d-flex align-items-center gap-3 justify-content-start">
+                            <span class="d-block rounded-50 overflow-hidden" style="width: 60px; height: 60px;padding: 12px;background: #fff;border: 1px solid #929292;">
+                                <img class="img-fluid flex-shrink-0" src="<?= site_url('assets/img/c5.jpg')?>">
+                            </span>
+                            <div>
+                                <h5 class="mb-1 f17">Apras</h5>
+                                <div class="start-rating d-flex gap-1 mt-2">
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Testimonial End -->
+    <!-- Clients -->
+    <div class="container-fluid">
+        <div class="section clients text-center">
+            <h6 class="text-primary text-uppercase mb-3 f18 font-weight-400 wow fadeInUp">Our Clients</h6>
+            <h2 class="mb-5 f30 font-weight-900 text-capitalize wow fadeInUp">Trusted by Clients</h2>
+            <div class="owl-carousel client-slider">
+                <div class="client-list" data-tooltip="tooltip" title="Mahindra EPC Irrigation Limited">
+                    <img src="<?= site_url('assets/img/1200px-Mahindra_EPC_Logo.svg.png')?>" alt="">
+                </div>
+                <div class="client-list" data-tooltip="tooltip" title="Garware Technical Fibres Limited">
+                    <img src="<?= site_url('assets/img/garware-logo.png')?>" alt="Garware Technical Fibres Limited">
+                </div>
+                <div class="client-list" data-tooltip="tooltip" title="Tritech Disconnecters IND Pvt Ltd">
+                    <img src="<?= site_url('assets/img/tritech.jpg')?>" alt="Tritech Disconnecters IND Pvt Ltd">
+                </div>
+                <div class="client-list" data-tooltip="tooltip" title="Sahyadri Farms">
+                    <img src="<?= site_url('assets/img/Sahyadri_logo.svg')?>" alt="Sahyadri Farms">
+                </div>
+                <div class="client-list" data-tooltip="tooltip" title="Apras">
+                    <img src="<?= site_url('assets/img/APRAS_Master_Logo.png')?>" alt="Apras">
+                </div>
+                <div class="client-list" data-tooltip="tooltip" title="Go Gas Limited">
+                    <img src="<?= site_url('assets/img/Gogas_logo.png')?>" alt="Go Gas Limited">
+                </div>
+                <div class="client-list" data-tooltip="tooltip" title="Popular Switchgears Pvt Ltd">
+                    <img src="<?= site_url('assets/img/ps-logo.jpg')?>" alt="Popular Switchgears Pvt Ltd">
+                </div>
+                <div class="client-list" data-tooltip="tooltip" title="Huphen Electromech">
+                    <img src="<?= site_url('assets/img/he.png')?>" alt="Huphen Electromech">
+                </div>
+                <div class="client-list" data-tooltip="tooltip" title="Hexagone Graphite">
+                    <img src="<?= site_url('assets/img/Hexagon_logo.png')?>" alt="Hexagone Graphite">
+                </div>
+                <div class="client-list" data-tooltip="tooltip" title="Epcos">
+                    <img src="<?= site_url('assets/img/Epcos-Logo.png')?>" alt="Epcos">
+                </div>
+                <div class="client-list" data-tooltip="tooltip" title="Dham Fasteners">
+                    <img src="<?= site_url('assets/img/dham-fasteners.jpg')?>" alt="Dham Fasteners">
                 </div>
             </div>
         </div>
     </div>
-    <!-- Team End -->
-        
-    <?php include("footer.php"); ?>
+    <!-- Clients End -->
+    <?php include("footer.php") ?>

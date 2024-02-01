@@ -1,12 +1,30 @@
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s" style="margin-top: 6rem;">
+<!-- Footer Start -->
+<div class="container-fluid bg-dark text-light footer wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-lg-4 col-md-6">
-                    <h4 class="text-light mb-4">Address</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Sr. No.462, Ambad-Link Road, Satpur, Nashik</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 75885 54482</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>mktransportcompany1199@gmail.com</p>
+                <div class="col-lg-3 col-md-12">
+                    <img src="<?= site_url('assets/img/logo-w.png')?>" alt="MK Transport" class="img-fluid mb-4" />
+                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with A wonderful serenity</p>
+                </div>
+                <div class="col-lg-3 col-md-6 pt-4">
+                    <h2 class="text-white font-weight-700 mb-4">EXPLORE</h2>
+                    <a class="btn btn-link" href="index.html">Home</a>
+                    <a class="btn btn-link" href="about-us.html">About us</a>
+                    <a class="btn btn-link" href="services.html">Our Services</a>
+                    <a class="btn btn-link" href="contact.html">Contact us</a>
+                </div>
+                <div class="col-lg-3 col-md-6 pt-4">
+                    <h2 class="text-white font-weight-700 mb-4">Services</h2>
+                    <a class="btn btn-link" href="services.html#Warehousing">Warehousing</a>
+                    <a class="btn btn-link" href="services.html#Industrial">Industrial Transport</a>
+                    <a class="btn btn-link" href="services.html#Domestic">Domestic Shifting</a>
+                    <a class="btn btn-link" href="services.html#Loading">Loading and Unloading</a>
+                </div>
+                <div class="col-lg-3 col-md-6 pt-4">
+                    <h2 class="text-white font-weight-700 mb-4">Address</h2>
+                    <p class="mb-2 d-flex gap-2 mb-4"><i class="fa fa-map-marker-alt me-3"></i>Sr. No.462, Ambad-Link Road, Satpur, Nashik</p>
+                    <p class="mb-2 d-flex gap-2 mb-4"><i class="fa fa-phone-alt me-3"></i>+91 75885 54482</p>
+                    <p class="mb-2 d-flex gap-2 mb-2"><i class="fa fa-envelope me-3"></i>mktransportcompany1199@gmail.com</p>
                     <!-- <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
@@ -14,23 +32,27 @@
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
                     </div> -->
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <h4 class="text-light mb-4">Services</h4>
-                    <a class="btn btn-link" href="#">Road Freight</a>
-                    <a class="btn btn-link" href="#">Logistic Solutions</a>
-                    <a class="btn btn-link" href="#">Industry solutions</a>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <h4 class="text-light mb-4">Quick Links</h4>
-                    <!-- <a class="btn btn-link" href="<?= site_url('about');?>">About Us</a> -->
-                    <a class="btn btn-link" href="<?= site_url('services');?>">Contact Us</a>
-                    <a class="btn btn-link" href="<?= site_url('contact');?>">Our Services</a>
-                </div>
                 
+            </div>
+            <div class="copyright">
+                <div class="row align-items-center">
+                    <div class="col-12 col-lg-6 text-center text-lg-start">
+                        <p class="elementor-heading-title elementor-size-default">© Copyright 2024 MK Transport.</p>
+                    </div>
+                    <div class="col-12 col-lg-6 text-center text-lg-end">
+                        <div class="social-icons d-flex align-items-center">
+                            <a href="https://www.facebook.com/"><i aria-hidden="true" class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.twitter.com/"><i aria-hidden="true" class="fab fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/"><i aria-hidden="true" class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <!-- Footer End -->
+    <a class="socialright shake" href="https://wa.me/+917588554482?text=Hey%20MK%20Transport%20I%20would%20like%20to%20know%20more%20about%20your%20services?" target="_blank"><img src="<?= site_url('assets/img/whtatsapp.png')?>"></a>
+    
     <script>
         function onlyNumberKey(evt) {
              
@@ -49,6 +71,25 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- Modernizer JS -->
+    <script src="<?= site_url('assets/js/vendor/modernizr-2.8.3.min.js')?>"></script>
+
+    <!-- jQuery JS -->
+    <script src="<?= site_url('assets/js/vendor/jquery.min.js')?>"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="<?= site_url('assets/js/vendor/bootstrap.min.js')?>"></script>
+
+    <!-- Popper JS -->
+    <script src="<?= site_url('assets/js/vendor/popper.min.js')?>"></script>
+
+    <!-- Swiper Slider JS -->
+    <script src="<?= site_url('assets/js/plugins/swiper.min.js')?>"></script>
+
+    <!-- Tippy JS -->   
+    <script src="<?= site_url('assets/js/plugins/tippy.min.js')?>"></script>
     <script src="<?= site_url('assets/lib/wow/wow.min.js');?>"></script>
     <script src="<?= site_url('assets/lib/easing/easing.min.js');?>"></script>
     <script src="<?= site_url('assets/lib/waypoints/waypoints.min.js');?>"></script>
@@ -60,3 +101,4 @@
 </body>
 
 </html>
+

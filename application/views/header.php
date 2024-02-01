@@ -11,7 +11,7 @@
   
 
     <!-- Favicon -->
-    <link href="<?= site_url('assets/img/logo.png');?>" rel="icon">
+    <link href="<?= site_url().'assets/img/logo.png';?>" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,16 +22,25 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
+    <!-- Ionicons CSS -->
+    <link rel="stylesheet" href="<?= site_url().'assets/css/ionicons.min.css';?>">
+
+    <!-- Icomoon CSS -->
+    <link rel="stylesheet" href="<?= site_url().'assets/css/vendor/icomoon.min.css';?>">
+    <!-- Swiper slider CSS -->
+    <link rel="stylesheet" href="<?= site_url().'assets/css/plugins/swiper.min.css';?>">
+
     <!-- Libraries Stylesheet -->
-    <link href="<?= site_url('assets/lib/animate/animate.min.css');?>" rel="stylesheet">
-    <link href="<?= site_url('assets/lib/owlcarousel/assets/owl.carousel.min.css');?>" rel="stylesheet">
+    <link href="<?= site_url().'assets/lib/animate/animate.min.css';?>" rel="stylesheet">
+    <link href="<?= site_url().'assets/lib/owlcarousel/assets/owl.carousel.min.css';?>" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="<?= site_url('assets/css/bootstrap.min.css');?>" rel="stylesheet">
+    <link href="<?= site_url().'assets/css/bootstrap.min.css';?>" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="<?= site_url('assets/css/style.css');?>" rel="stylesheet">
+    <link href="<?= site_url().'assets/css/style.css';?>" rel="stylesheet">
 </head>
+
 
 <body>
     <!-- Spinner Start -->
@@ -42,23 +51,130 @@
     </div>
     <!-- Spinner End -->
 
-
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow border-top border-5 border-primary sticky-top p-0">
-        <a href="#" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h2 class="mb-2 text-white"><img src="<?= site_url('assets/img/logo.png');?>" alt="" class="logo"></h2>
-        </a>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="<?= site_url('/');?>" class="nav-item nav-link active">Home</a>
-                <!-- <a href="<?= site_url('index.php/frontend/about');?>" class="nav-item nav-link">About</a> -->
-                <a href="<?= site_url('index.php/frontend/services');?>" class="nav-item nav-link">Services</a>
-                <a href="<?= site_url('index.php/frontend/contact');?>" class="nav-item nav-link">Contact</a>
+    <!--  header area -->
+    <div class="header-area header-sticky fixed-top">
+        <div class="header-area__desktop">
+            <!-- header top bar -->
+            <div class="header-top-bar">
+                <div class="container-fluid container-fluid--cp-60">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8">
+                            <!-- top bar left -->
+                            <div class="top-bar-left-wrapper">
+                                <ul class="topbar-menu">
+                                    <li><a href="mailto:info@mktransport.in"><i class="ion-ios-email-outline"></i> info@mktransport.in</a></li>
+                                    <li><a href="tel:+912536622907" class="d-inline-block"><i class="ion-android-call"></i> +91-253-6622907,</a> <a href="tel:+912532992734" class="d-inline-block">+91-253-2992734,</a> <a href="tel:+918600134655" class="d-inline-block">+91-8600134655</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <!-- top bar right -->
+                            <div class="top-bar-right-wrapper">
+                                <ul class="topbar-info">
+                                    <li><i class="ion-clock"></i> Mon - Sat: 9:00 - 19:00</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <h4 class="m-0 pe-lg-5 d-none d-lg-block"><i class="fa fa-headphones text-primary me-3"></i>+91 75885 54482</h4>
+            <!-- End of header top bar -->
+            <!-- header navigation area -->
+            <div class="header-navigation-area">
+                <div class="container-fluid container-fluid--cp-60">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="header-navigation-wrapper">
+                                <!-- logo -->
+                                <div class="logo">
+                                    <a href="index.html">
+                                        <img src="<?= site_url('assets/img/logo.png')?>" class="img-fluid" alt="">
+                                    </a>
+                                </div>
+
+                                <!-- header navigation -->
+                                <div class="header-navigation border-left border-right">
+                                    <div class="header-navigation__nav">
+                                        <nav>
+                                            <ul>
+                                                <li class="active"><a href="index.html">HOME</a></li>
+                                                <li><a href="<?= site_url().'index.php/frontend/about'?>">About us</a></li>
+                                                <li><a href="<?= site_url().'index.php/frontend/services'?>">Services</a></li>
+                                                <li><a href="<?= site_url().'index.php/frontend/contact';?>">Contact Us</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                    <div class="header-navigation__contact">
+                                        <div class="header-navigation__contact__image">
+                                            <i class="ion-ios-telephone-outline"></i>
+                                        </div>
+                                        <div class="header-navigation__contact__content">
+                                            <span class="text">Call us for any question</span>
+                                            <a href="tel:+917588554482"><h4 class="sub-text">(+91)758.855.4482</h4></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- header search -->
+                                <div class="header-search d-flex align-items-end justify-content-end">
+                                    <div class="social-links">
+                                        <ul>
+                                            <li><a href="#" data-tippy="Facebook" data-tippy-inertia="false" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder__yellow" data-tippy-placement="bottom"><i class="ion-social-facebook"></i></a>
+                                            </li>
+                                            <li><a href="#" data-tippy="Twitter" data-tippy-inertia="false" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder__yellow" data-tippy-placement="bottom"><i class="ion-social-twitter"></i></a>
+                                            </li>
+                                            <li><a href="#" data-tippy="Google plus" data-tippy-inertia="false" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder__yellow" data-tippy-placement="bottom"><i class="ion-social-googleplus"></i></a></li>
+                                            <li><a href="#" data-tippy="TouTube" data-tippy-inertia="false" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder__yellow" data-tippy-placement="bottom"><i class="ion-social-youtube"></i></a>
+                                            </li>
+                                            <li><a href="#" data-tippy="Instagram" data-tippy-inertia="false" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder__yellow" data-tippy-placement="bottom"><i class="ion-social-instagram"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <a href="#" class="ht-btn ht-btn--default d-inline-block text-white">GET A QUOTE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of header navigation area-->
         </div>
-    </nav>
-    <!-- Navbar End -->
+        <div class="header-area__mobile">
+            <!-- mobile menu -->
+            <div class="mobile-menu-area">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-4 col-sm-6 col-5">
+                            <!-- logo -->
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="<?= site_url('assets/img/logo.png') ?>" class="img-fluid" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-sm-6 col-7">
+                            <!-- mobile menu content -->
+                            <div class="mobile-menu-content">
+                                <div class="social-links d-none d-md-block">
+                                    <ul>
+                                        <li><a href="#" data-tippy="Facebook" data-tippy-inertia="false" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder__yellow" data-tippy-placement="bottom"><i class="ion-social-facebook"></i></a>
+                                        </li>
+                                        <li><a href="#" data-tippy="Twitter" data-tippy-inertia="false" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder__yellow" data-tippy-placement="bottom"><i class="ion-social-twitter"></i></a>
+                                        </li>
+                                        <li><a href="#" data-tippy="Google plus" data-tippy-inertia="false" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder__yellow" data-tippy-placement="bottom"><i class="ion-social-googleplus"></i></a></li>
+                                        <li><a href="#" data-tippy="TouTube" data-tippy-inertia="false" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder__yellow" data-tippy-placement="bottom"><i class="ion-social-youtube"></i></a>
+                                        </li>
+                                        <li><a href="#" data-tippy="Instagram" data-tippy-inertia="false" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder__yellow" data-tippy-placement="bottom"><i class="ion-social-instagram"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="mobile-navigation-icon" id="mobile-menu-trigger">
+                                    <i></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of mobile menu -->
+        </div>
+    </div>
+    <!--  End of header area  -->

@@ -11,7 +11,7 @@
     };
     spinner();
     
-    
+    //$('[data-tooltip="tooltip"]').tooltip();
     // Initiate the wowjs
     new WOW().init();
 
@@ -24,6 +24,54 @@
             $('.sticky-top').css('top', '-100px');
         }
     });
+
+    /*----------  Menu sticky ----------*/
+
+  var windows = $(window);
+  var sticky = $(".header-sticky");
+  var $body = $("body");
+
+  windows.on("scroll", function () {
+    var scroll = windows.scrollTop();
+    var headerHeight = sticky.height();
+
+      if (scroll < headerHeight) {
+        sticky.removeClass("is-sticky");
+      } else {
+        sticky.addClass("is-sticky");
+      }
+  });
+
+  /*----------  Scroll to top  ----------*/
+
+  function scrollToTop() {
+    var $scrollUp = $("#scroll-top"),
+      $lastScrollTop = 0,
+      $window = $(window);
+
+    $window.on("scroll", function () {
+      var st = $(this).scrollTop();
+      if (st > $lastScrollTop) {
+        $scrollUp.removeClass("show");
+      } else {
+        if ($window.scrollTop() > 200) {
+          $scrollUp.addClass("show");
+        } else {
+          $scrollUp.removeClass("show");
+        }
+      }
+      $lastScrollTop = st;
+    });
+
+    $scrollUp.on("click", function (evt) {
+      $("html, body").animate({ scrollTop: 0 }, 600);
+      evt.preventDefault();
+    });
+  }
+
+  scrollToTop();
+
+  /*=====  End of menu sticky and scroll to top  ======*/
     
     
     // Dropdown on mouse hover
@@ -109,6 +157,37 @@
             }
         }
     });
+    // Client carousel
+    $(".client-slider").owlCarousel({
+      autoplay: true,
+      smartSpeed: 1000,
+      center: true,
+      dots: true,
+      loop: true,
+      margin: 30,
+      responsive: {
+          0:{
+              items:2
+          },
+          768:{
+              items:4
+          },
+          992:{
+              items:6
+          }
+      }
+  });
+    function thmSwiperInit() {
+        // swiper slider
+        const swiperElm = document.querySelectorAll(".thm-swiper__slider");
+        swiperElm.forEach(function (swiperelm) {
+          const swiperOptions = JSON.parse(swiperelm.dataset.swiperOptions);
+          let thmSwiperSlider = new Swiper(swiperelm, swiperOptions);
+        });
+      }
+
+$(window).on("load", function () {
+    thmSwiperInit();
+});
     
 })(jQuery);
-

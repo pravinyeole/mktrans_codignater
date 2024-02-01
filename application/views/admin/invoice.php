@@ -9,7 +9,7 @@
 
     </head>
 <body>  
-    <div class="jumbotron text-right">
+    <!-- <div class="jumbotron text-right">
         <div class="row">
             <div class="col-sm-12">
                 <div class="col-sm-6">
@@ -17,37 +17,46 @@
                 </div>
                 <div class="col-sm-6">
                     <span><h1 style="color:#ef7f1a;float:right;">INVOICE</h1></span>
-                    <span><label style="color:black;float:right;">Date : <?= $data[0]->date;?> </label></span>
                 </div>
             </div>    
         </div> 
-    </div>
-
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="col-sm-3" style="float:right;text-align:right;">
-                <label>INVOICE NUMBER </label><br>
-                <label><?= $data[0]->id; ?></label> 
-            </div>
-        </div>    
-    </div>
-
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="col-sm-3" class="text-left " style="word-wrap: break-word;width:170px;">
-                <h4><b>Bill To :</b></h4>
-                <p><b><?= $data[0]->company_name; ?></b></p>
-                <p><?= $data[0]->address; ?></p>
-                Mo.No. :<?= $data[0]->mobile; ?><br>
-                GSTIN :<?= $data[0]->gstno; ?>
-            </div>
-        </div>    
-    </div>
-
-
+    </div> -->
     <div class="container">
-        <div class="row">    
-            <div class="col-sm-12" style="text-align: center; margin-top:5%;">
+    <div class="row">    
+        <div class="col-sm-12" style="text-align: center;">
+            <table class="table" style="margin:0px;background-color:#a5a3a38c;">
+                <tbody>
+                    <tr>
+                        <td style="width:20%;float:left;"><img src="assets/logo.png" rel="logo"></td>
+                        <td style="width:20%;text-align:center;">
+                            <small><b>Shree Swami Samarth</b></small>
+                            <h4><b style="color:#ef7f1a;">MK TRANSPORT COMPANY</b></h4>
+                            <small style="text-align:center;"><b>Ambad Link Road, Satpur, Nashlk, Maharashtra Mob. No: 7588554482, Email :tidke.mayur@gmail.com </b> </small>
+                        </td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <th>Bill To :</th>
+                        <th>Date : <?= $data[0]->date;?></th>
+                    </tr>
+                    <tr>
+                        <td><?= $data[0]->company_name; ?><br>
+                        <?= $data[0]->address; ?><br>
+                        Mo.No. :<?= $data[0]->mobile; ?><br>
+                        GSTIN :<?= $data[0]->gstno; ?>
+                    </td>
+                        <td><b>INVOICE : <?= $data[0]->mk_invoice_no; ?></b></td>
+                    </tr>
+                </tbody>
+            </tabel>
+
+
+            <div class="col-sm-12" style="text-align: center;">
                 <table class="table table-bordered">
                     <thead>
                     <tr>
@@ -88,36 +97,13 @@
                                     <b>IFSC CODE :</b> BARB0PIMPAL <br>
                                     <b>PAN No.:</b> ASMPT1360J <br>
                                     <b>GSTIN NO.:</b> 27ASMPT1360J1ZB<br></td>
-                        <td colspan="4" style="width:50%;"><img src="assets/sign.png" /></td>
+                        <td colspan="4" style="width:50%;text-align:center;"><img src="assets/sign.png" style="margin-top:40px;"/></td>
                     </tr>
                     </tbody>
                 </table>
-                <div class="col-sm-12">
-                    <div class="col-sm-3" style="text-align:left;">
-
-                    </div>
-                    <div class="col-sm-3" style="text-align:right;">
-                        
-                    </div>
-                </div>
             </div>
         </div>
     </div>
-
-        <div class="col-sm-12" style="text-align:left;">
-            <div class="col-sm-6">
-                <h4><b>Address :</b></h4>
-                <span>464/B/2 , NEAR ESSAR PETROL PUMP<br> 
-                AMBAD LINK ROAD SATPUR<br>
-                NASHIK,422012
-                <br>
-                Mo.No. <b>7588554482</b>
-                <br>
-                Email ID : <b>tidke.mayur@gmail.com</b></span>
-            </div>
-        </div>
-
-        
     </body>
 </html>
 

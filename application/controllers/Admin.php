@@ -130,6 +130,7 @@
 		function submit_invoice_form()
 		{
 			$data['date'] = $this->input->post('date');
+			$data['mk_invoice_no'] = $this->input->post('invoice_no_mk');
 			$data['company_name'] = ucfirst(strtolower($this->input->post('companyname')));
 			$data['mobile'] = $this->input->post('mobilenumber');
 			$data['address'] = $this->input->post('address');
@@ -152,14 +153,27 @@
 		}
 
 		function invoice_list(){
-			$data = $this->db->query("select * from invoice_form Order By date Desc")->result();
-
-			$this->load->view('admin/invoice_list',compact('data'));
+			$data = $this->db->query("select * from invoice_form where is_delete ='1' Order By date Desc")->result();
+			$status = 'active';
+			$this->load->view('admin/invoice_list',compact('data','status'));
 		}
+		function invoice_list_inactive(){
+			$data = $this->db->query("select * from invoice_form where is_delete ='0' Order By date Desc")->result();
+			$status = 'inactive';
+			$this->load->view('admin/invoice_list',compact('data','status'));
+		}
+		
 
 		function invoice_pdf(){
 
 			$this->load->view('admin/invoice');
+		}
+
+		function delete_invoice(){
+			$page_id =$this->uri->segment(3);
+			$data = $this->db->query("Update invoice_form SET is_delete='0' Where id=$page_id");
+
+			redirect('index.php/Admin/invoice_list');
 		}
 
 		function view_invoice(){
@@ -174,6 +188,107 @@
 			$this->pdf->stream($data[0]->company_name.".pdf");
 			
 			$this->load->view('admin/invoice',compact('data'));
+		}
+
+		function Create_lr(){
+			$data = $this->db->query("SELECT id,name,material_weight from vehicle_type")->result();
+			$this->load->view('admin/lr',compact('data'));
+		}
+
+		function submit_lr_form()
+		{
+			$data['invoice_no'] = $this->input->post('invoice_no');
+			$data['invoice_date'] = $this->input->post('invoice_date');
+			$data['invoice_bill_no'] = $this->input->post('bill_no');
+			$data['lorry_receipt_no'] = $this->input->post('lorry_no');
+			$data['lorry_receipt_date'] = $this->input->post('lorry_date');
+			$data['vehicle_no'] = strtoupper($this->input->post('vehicle_no'));
+			$data['consignor_name'] = ucfirst(strtolower($this->input->post('Consignorname')));
+			$data['consignor_address'] = ucfirst(strtolower($this->input->post('Consignor_address')));
+			$data['consignor_no'] = $this->input->post('Consignor_mobilenumber');
+			$data['consignor_gst'] = strtoupper($this->input->post('Consignor_gst'));
+			$data['consignee_name'] = ucfirst(strtolower($this->input->post('Consigneename')));
+			$data['consignee_address'] = ucfirst(strtolower($this->input->post('consignee_address')));
+			$data['consignee_no'] = $this->input->post('Consigneemobilenumber');
+			$data['consignee_gst'] = strtoupper($this->input->post('Consignee_gst'));
+			$data['loading_charge'] = $this->input->post('load_charge');
+			$data['other_charge'] = $this->input->post('other_charge');
+			$data['bilty_charge'] = $this->input->post('bilti_charge');
+			$data['freight_amount'] = $this->input->post('freight_amount');
+			$data['advance_amount'] = $this->input->post('advance_amount');
+			$data['balance_amount'] = $this->input->post('balance_amount');
+			$data['route1'] = ucfirst(strtolower($this->input->post('route1')));
+			$data['route2'] = ucfirst(strtolower($this->input->post('route2')));
+			$data['jurisdiction_place'] = ucfirst(strtolower($this->input->post('jurisdiction_place')));
+
+			$data['insurance_name'] = ucfirst(strtolower($this->input->post('insurance_name')));
+			$data['insurance_number'] = $this->input->post('insurance_no');
+			$data['insurance_amount'] = $this->input->post('insurance_amount');
+			$data['insurance_date'] = $this->input->post('insurance_date');
+
+            $ids = $this->db->insert('lr_form',$data);
+
+			$material_type = ucfirst(strtolower($this->input->post('material_type')));
+			$hsn = $this->input->post('hsn');
+			$weight = $this->input->post('weight');
+			$rate = $this->input->post('rate');
+			$id = $this->db->insert_id();
+			for($i = 0; $i < count($material_type); $i++)
+			{
+				if(!empty($material_type[$i]))
+				{
+					$data1['lr_id'] = $id;
+					$data1['material_type'] = $material_type[$i];
+					$data1['hsn'] = $hsn[$i];
+					$data1['weight'] = $weight[$i];
+					$data1['rate'] = $rate[$i];
+	
+					$this->db->insert('lr_details',$data1);
+				}
+				else
+				{
+					break;
+				}
+			}
+
+            $this->session->set_flashdata('msg', 'Data Save Successfully');
+			redirect('index.php/Admin/Create_lr');
+		}
+
+		function lr_list(){
+			$data = $this->db->query("select * from lr_form Order By invoice_date Desc")->result();
+
+			$this->load->view('admin/lr_list',compact('data'));
+		}
+
+		function view_lr(){
+			$page_id =$this->uri->segment(3);
+			$data = $this->db->query("select *,lr_details.* from lr_form Left join lr_details on lr_details.lr_id = lr_form.id where lr_form.id = $page_id")->result();
+			
+			ob_start();
+			$this->pdf->load_view('admin/lr_pdf',compact('data'));
+			$this->pdf->render();
+			ob_end_clean();
+			$this->pdf->stream($data[0]->consignor_name.".pdf");
+			
+			$this->load->view('admin/lr_pdf',compact('data'));
+		}
+
+		function logout()
+		{
+			$user_data = $this->session->all_userdata();
+				foreach ($user_data as $key => $value) {
+					if ($key != 'userId' && $key != 'ip_address' && $key != 'user_agent' && $key != 'last_activity') {
+						$this->session->unset_userdata($key);
+					}
+				}
+			$this->session->sess_destroy();
+			redirect('index.php/admin');
+		}
+
+		function Create_Stock(){
+			$data = $this->db->query("SELECT id,name,material_weight from vehicle_type")->result();
+			$this->load->view('admin/stock',compact('data'));
 		}
 
 	}
