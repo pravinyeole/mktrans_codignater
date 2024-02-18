@@ -8,17 +8,17 @@
                 </div>
                 <div class="col-lg-3 col-md-6 pt-4">
                     <h2 class="text-white font-weight-700 mb-4">EXPLORE</h2>
-                    <a class="btn btn-link" href="index.html">Home</a>
-                    <a class="btn btn-link" href="about-us.html">About us</a>
-                    <a class="btn btn-link" href="services.html">Our Services</a>
-                    <a class="btn btn-link" href="contact.html">Contact us</a>
+                    <a class="btn btn-link" href="<?= site_url()?>">Home</a>
+                    <a class="btn btn-link" href="<?= site_url().'frontend/about'?>">About us</a>
+                    <a class="btn btn-link" href="<?= site_url().'frontend/services'?>">Our Services</a>
+                    <a class="btn btn-link" href="<?= site_url().'frontend/contact'?>">Contact us</a>
                 </div>
                 <div class="col-lg-3 col-md-6 pt-4">
                     <h2 class="text-white font-weight-700 mb-4">Services</h2>
-                    <a class="btn btn-link" href="services.html#Warehousing">Warehousing</a>
-                    <a class="btn btn-link" href="services.html#Industrial">Industrial Transport</a>
-                    <a class="btn btn-link" href="services.html#Domestic">Domestic Shifting</a>
-                    <a class="btn btn-link" href="services.html#Loading">Loading and Unloading</a>
+                    <a class="btn btn-link" href="<?= site_url().'frontend/services'?>">Warehousing</a>
+                    <a class="btn btn-link" href="<?= site_url().'frontend/services'?>">Industrial Transport</a>
+                    <a class="btn btn-link" href="<?= site_url().'frontend/services'?>">Domestic Shifting</a>
+                    <a class="btn btn-link" href="<?= site_url().'frontend/services'?>">Loading and Unloading</a>
                 </div>
                 <div class="col-lg-3 col-md-6 pt-4">
                     <h2 class="text-white font-weight-700 mb-4">Address</h2>
@@ -39,13 +39,13 @@
                     <div class="col-12 col-lg-6 text-center text-lg-start">
                         <p class="elementor-heading-title elementor-size-default">© Copyright 2024 MK Transport.</p>
                     </div>
-                    <div class="col-12 col-lg-6 text-center text-lg-end">
+<!--                     <div class="col-12 col-lg-6 text-center text-lg-end">
                         <div class="social-icons d-flex align-items-center">
                             <a href="https://www.facebook.com/"><i aria-hidden="true" class="fab fa-facebook-f"></i></a>
                             <a href="https://www.twitter.com/"><i aria-hidden="true" class="fab fa-twitter"></i></a>
                             <a href="https://www.linkedin.com/"><i aria-hidden="true" class="fab fa-linkedin-in"></i></a>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

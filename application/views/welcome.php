@@ -30,9 +30,9 @@
                                     <h2>Place For Your<br /><span class="text-primary">Logistics</span> Solution</h2>
                                    <p>Your Journey, Our Commitment:<br />Transport Simplified.</p>
                                     <div class="main-slider-three__bottom">
-                                        <a href="aboutus.html" class="thm-btn main-slider-three__btn">Know More</a>
+                                        <a href="<?= site_url().'frontend/about'?>" class="thm-btn main-slider-three__btn">Know More</a>
                                         
-                                            <a class="thm-btn cta-one__btn ml-20"  href="contactus.html">Contact Us</a>
+                                        <a class="thm-btn cta-one__btn ml-20"  href="<?= site_url().'frontend/contact';?>">Contact Us</a>
                                         
                                     </div>
 
@@ -56,8 +56,9 @@ Consultants</h2>
                                      <p>We have several clientele in UAE as well as overseas, and we are ambitiously
 leaving our footprint around the globe.</p>
                                     <div class="main-slider-three__bottom">
-                                        <a href="aboutus.html" class="thm-btn main-slider-three__btn">Know More</a>
-                                        <a class="thm-btn cta-one__btn ml-20"  href="contactus.html">Contact Us</a>
+                                        <a href="<?= site_url().'frontend/about'?>" class="thm-btn main-slider-three__btn">Know More</a>
+                                        
+                                        <a class="thm-btn cta-one__btn ml-20"  href="<?= site_url().'frontend/contact';?>">Contact Us</a>
                                     </div>
 
                                 </div>
@@ -78,8 +79,9 @@ leaving our footprint around the globe.</p>
                                    <h2>Petrol pump and LPG pump<br> service provide in nashik</h2>
                                     <p>We assure you of competent and excellent services <br>within your budget.</p>
                                     <div class="main-slider-three__bottom">
-                                         <a href="aboutus.html" class="thm-btn main-slider-three__btn">Know More</a>
-                                        <a class="thm-btn cta-one__btn ml-20"  href="contactus.html">Contact Us</a>
+                                        <a href="<?= site_url().'frontend/about'?>" class="thm-btn main-slider-three__btn">Know More</a>
+                                        
+                                        <a class="thm-btn cta-one__btn ml-20"  href="<?= site_url().'frontend/contact';?>">Contact Us</a>
                                     </div>
 
                                 </div>
@@ -109,7 +111,7 @@ leaving our footprint around the globe.</p>
                 <div class="col-lg-7 about-text wow fadeInUp" data-wow-delay="0.3s">
                     <div class="pe-4 dark-text">
                     <h6 class="text-primary text-uppercase mb-3 f18 font-weight-300">About Us</h6>
-                    <h3 class="f24 font-weight-400">YOUR RELIABLE MOVING PARTNER SINCE 2019</h3>
+                    <h3 class="f24 font-weight-400">YOUR RELIABLE MOVING PARTNER SINCE 2018</h3>
                     <h1 class="mb-5 f40 font-weight-900 text-uppercase">MK Transport Company</h1>
                     <p>At MK Transport Company, we're passionate about making journeys memorable, reliable, and hassle-free. With a deep-rooted commitment to excellence, we've been your trusted transportation partner for 5 years and counting.</p>
                             <p>Our dedicated team of movers and packers are highly trained and committed to ensuring the safety of your belongings. We handle your possessions with care and attention to detail. As an international moving company, we have established a all over india network of partners and affiliates. This means we can efficiently manage your move to and from virtually anywhere in the India. We understand that every move is unique. We work closely with you to create a customized moving plan that suits your specific requirements and budget.</p>
@@ -158,8 +160,8 @@ leaving our footprint around the globe.</p>
                 <div class="col-6 col-lg-3">
                     <div class="counter" data-wow-delay="0.9s">
                         <img src="assets/img/vehicle.png" alt="" class="img-fluid" />
-                        <h2 class="text-white mb-2 f52 pt-3"><span data-toggle="counter-up">10</span><span class="more">+</span></h2>
-                        <p class="text-white mb-0">Total Vehicle</p>
+                        <h2 class="text-white mb-2 f52 pt-3"><span data-toggle="counter-up">500</span><span class="more">+</span></h2>
+                        <p class="text-white mb-0">Total Vehicle Connected</p>
                     </div>
                 </div>
             </div>
@@ -183,18 +185,18 @@ leaving our footprint around the globe.</p>
                                 <img src="assets/img/case-one-img-1.jpg" alt="">
                                 <div class="case-one__content">
                                     <p class="case-one__tagline-line">Our Services</p>
-                                    <h3 class="case-one__title"><a href="services.html">Warehousing</a></h3>
+                                    <h3 class="case-one__title"><a href="<?= site_url().'frontend/services'?>">Warehousing</a></h3>
                                     <div class="case-one__icon">
-                                        <a href="services.html"><i class="bi bi-arrow-right"></i></a>
+                                        <a href="<?= site_url().'frontend/services'?>"><i class="bi bi-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="case-one__hover">
                                 <p class="case-one__hover-tagline-line">Our Services</p>
-                                <h3 class="case-one__hover-title"><a href="services.html">Warehousing</a></h3>
+                                <h3 class="case-one__hover-title"><a href="<?= site_url().'frontend/services'?>">Warehousing</a></h3>
                                 <p class="case-one__hover-text">Imagine you received a sudden transfer notice, and within a mere week, you must relocate out of the city...</p>
                                 <div class="case-one__hover-icon">
-                                    <a href="services.html"><i class="bi bi-arrow-right"></i></a>
+                                    <a href="<?= site_url().'frontend/services'?>"><i class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -207,18 +209,18 @@ leaving our footprint around the globe.</p>
                                 <img src="assets/img/case-one-img-2.jpg" alt="">
                                 <div class="case-one__content">
                                     <p class="case-one__tagline-line">Our Services</p>
-                                    <h3 class="case-one__title"><a href="services.html">Industrial Transport</a></h3>
+                                    <h3 class="case-one__title"><a href="<?= site_url().'frontend/services'?>">Industrial Transport</a></h3>
                                     <div class="case-one__icon">
-                                        <a href="services.html"><i class="bi bi-arrow-right"></i></a>
+                                        <a href="<?= site_url().'frontend/services'?>"><i class="bi bi-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="case-one__hover">
                                 <p class="case-one__hover-tagline-line">Our Services</p>
-                                <h3 class="case-one__hover-title"><a href="services.html">Industrial Transport</a></h3>
+                                <h3 class="case-one__hover-title"><a href="<?= site_url().'frontend/services'?>">Industrial Transport</a></h3>
                                 <p class="case-one__hover-text">Irrespective of your industry type, if you need to pack and transport your industrial materials, we are here to assist you...</p>
                                 <div class="case-one__hover-icon">
-                                    <a href="services.html"><i class="bi bi-arrow-right"></i></a>
+                                    <a href="<?= site_url().'frontend/services'?>"><i class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -231,18 +233,18 @@ leaving our footprint around the globe.</p>
                                 <img src="assets/img/case-one-img-4.jpg" alt="">
                                 <div class="case-one__content">
                                     <p class="case-one__tagline-line">Our Services</p>
-                                    <h3 class="case-one__title"><a href="services.html">Domestic Shifting</a></h3>
+                                    <h3 class="case-one__title"><a href="<?= site_url().'frontend/services'?>">Domestic Shifting</a></h3>
                                     <div class="case-one__icon">
-                                        <a href="services.html"><i class="bi bi-arrow-right"></i></a>
+                                        <a href="<?= site_url().'frontend/services'?>"><i class="bi bi-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="case-one__hover">
                                 <p class="case-one__hover-tagline-line">Our Services</p>
-                                <h3 class="case-one__hover-title"><a href="services.html">Domestic Shifting</a></h3>
+                                <h3 class="case-one__hover-title"><a href="<?= site_url().'frontend/services'?>">Domestic Shifting</a></h3>
                                 <p class="case-one__hover-text">Are you ready to embark on a significant transition as you prepare to move into a new residence in INDIA?...</p>
                                 <div class="case-one__hover-icon">
-                                    <a href="services.html"><i class="bi bi-arrow-right"></i></a>
+                                    <a href="<?= site_url().'frontend/services'?>"><i class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -255,18 +257,18 @@ leaving our footprint around the globe.</p>
                                 <img src="assets/img/case-one-img-3.jpg" alt="">
                                 <div class="case-one__content">
                                     <p class="case-one__tagline-line">Our Services</p>
-                                    <h3 class="case-one__title"><a href="services.html">Loading and Unloading</a></h3>
+                                    <h3 class="case-one__title"><a href="<?= site_url().'frontend/services'?>">Loading and Unloading</a></h3>
                                     <div class="case-one__icon">
-                                        <a href="services.html"><i class="bi bi-arrow-right"></i></a>
+                                        <a href="<?= site_url().'frontend/services'?>"><i class="bi bi-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="case-one__hover">
                                 <p class="case-one__hover-tagline-line">Our Services</p>
-                                <h3 class="case-one__hover-title"><a href="services.html">Loading and Unloading</a></h3>
+                                <h3 class="case-one__hover-title"><a href="<?= site_url().'frontend/services'?>">Loading and Unloading</a></h3>
                                 <p class="case-one__hover-text">We at MK Transport specialise in packing and moving of household goods, commercial goods like...</p>
                                 <div class="case-one__hover-icon">
-                                    <a href="services.html"><i class="bi bi-arrow-right"></i></a>
+                                    <a href="<?= site_url().'frontend/services'?>"><i class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -277,86 +279,7 @@ leaving our footprint around the globe.</p>
     </div>
     <!-- Service End -->
  <!--services Two Start-->
- <section class="services-two">
-    <div class="container">
-        <div class="section-title text-center">
-            <h6 class="text-primary text-uppercase mb-3 f18 font-weight-300">What we’re doing</h6>
-            <h2 class="mb-5 f36 font-weight-700 text-capitalize">How We Move Your Stuff</h2>
-        </div>
-        <div class="row">
-            <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
-                <!--services Two Single-->
-                <div class="services-two__single">
-                    <div class="services-two_icon">
-                        <span class="fa fa-file-alt"></span>
-                    </div>
-                    <h3 class="services-two__title"><a href="#">HOME
-SURVEY</a>
-                    </h3>
-                    
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
-                <!--services Two Single-->
-                <div class="services-two__single">
-                    <div class="services-two_icon">
-                        <span class="fa fa-calculator"></span>
-                    </div>
-                    <h3 class="services-two__title"><a href="#">COST
-ESTIMATION</a></h3>
-                    
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
-                <!--services Two Single-->
-                <div class="services-two__single">
-                    <div class="services-two_icon">
-                        <span class="fa fa-file-contract"></span>
-                    </div>
-                    <h3 class="services-two__title"><a href="#">QUOTE
-CONFIRMATION</a>
-                    </h3>
-                    
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-                <!--services Two Single-->
-                <div class="services-two__single">
-                    <div class="services-two_icon">
-                        <span class="fa fa-box-open"></span>
-                    </div>
-                    <h3 class="services-two__title"><a href="#">PACKING
-GOODS</a></h3>
-                   
-                </div>
-            </div>
-            
-            <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-                <!--services Two Single-->
-                <div class="services-two__single">
-                    <div class="services-two_icon">
-                        <span class="fa fa-shipping-fast"></span>
-                    </div>
-                    <h3 class="services-two__title"><a href="#">MOVING</a></h3>
-                   
-                </div>
-            </div>
-            
-            <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-                <!--services Two Single-->
-                <div class="services-two__single">
-                    <div class="services-two_icon">
-                        <span class="fa fa-truck-moving"></span>
-                    </div>
-                    <h3 class="services-two__title"><a href="#">DELIVERY/
-INSTALLATION</a></h3>
-                   
-                </div>
-            </div>
-            
-        </div>
-    </div>
-</section>
+ 
 <!--services Two End-->
 
     <!-- Feature Start -->
@@ -410,7 +333,7 @@ INSTALLATION</a></h3>
             </div>
             <div class="col-12 col-lg-2">
                 <div class="action text-end">
-                    <a href="contact.html" class="btn btn-secondary py-3 px-5">More About us</a>
+                    <a href="<?= site_url().'frontend/contact';?>" class="btn btn-secondary py-3 px-5">More About us</a>
                 </div>
             </div>
         </div>
@@ -462,7 +385,7 @@ INSTALLATION</a></h3>
                 <div class="testimonial-item p-4 my-5">
                     <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
                     <div class="mb-4">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ea, repellat velit enim aliquid maxime non! Tempore molestias mollitia culpa blanditiis impedit dolore eaque cum assumenda delectus, sint iusto ipsam?</p>
+                        <p> Clients expect transportation services to be punctual. They will assess whether the service arrived on time for pick-up and drop-off.</p>
                         <div class="d-flex align-items-center gap-3 justify-content-start">
                             <span class="d-block rounded-50 overflow-hidden" style="width: 60px; height: 60px;padding: 12px;background: #fff;border: 1px solid #929292;">
                                 <img class="img-fluid flex-shrink-0" src="assets/img/c1.jpg">
@@ -483,7 +406,7 @@ INSTALLATION</a></h3>
                 <div class="testimonial-item p-4 my-5">
                     <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
                     <div class="mb-4">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ea, repellat velit enim aliquid maxime non! Tempore molestias mollitia culpa blanditiis impedit dolore eaque cum assumenda delectus, sint iusto ipsam?</p>
+                        <p> Safety is paramount. Clients will review the condition of the vehicles, adherence to traffic rules, and the professionalism of the drivers.</p>
                         <div class="d-flex align-items-center gap-3 justify-content-start">
                             <span class="d-block rounded-50 overflow-hidden" style="width: 60px; height: 60px;padding: 12px;background: #fff;border: 1px solid #929292;">
                                 <img class="img-fluid flex-shrink-0" src="assets/img/c2.jpg">
@@ -504,7 +427,7 @@ INSTALLATION</a></h3>
                 <div class="testimonial-item p-4 my-5">
                     <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
                     <div class="mb-4">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ea, repellat velit enim aliquid maxime non! Tempore molestias mollitia culpa blanditiis impedit dolore eaque cum assumenda delectus, sint iusto ipsam?</p>
+                        <p>The comfort level of the transportation is crucial. Clients will assess factors such as cleanliness, vehicle condition, and amenities.</p>
                         <div class="d-flex align-items-center gap-3 justify-content-start">
                             <span class="d-block rounded-50 overflow-hidden" style="width: 60px; height: 60px;padding: 12px;background: #fff;border: 1px solid #929292;">
                                 <img class="img-fluid flex-shrink-0" src="assets/img/c3.jpg">
@@ -525,7 +448,7 @@ INSTALLATION</a></h3>
                 <div class="testimonial-item p-4 my-5">
                     <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
                     <div class="mb-4">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ea, repellat velit enim aliquid maxime non! Tempore molestias mollitia culpa blanditiis impedit dolore eaque cum assumenda delectus, sint iusto ipsam?</p>
+                        <p> Effective communication is essential. Clients will evaluate how well the transportation service communicated important information such as delays, changes in plans, or any issues that arose during the journey.</p>
                         <div class="d-flex align-items-center gap-3 justify-content-start">
                             <span class="d-block rounded-50 overflow-hidden" style="width: 60px; height: 60px;padding: 12px;background: #fff;border: 1px solid #929292;">
                                 <img class="img-fluid flex-shrink-0" src="assets/img/c4.jpg">
@@ -547,7 +470,29 @@ INSTALLATION</a></h3>
                 <div class="testimonial-item p-4 my-5">
                     <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
                     <div class="mb-4">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ea, repellat velit enim aliquid maxime non! Tempore molestias mollitia culpa blanditiis impedit dolore eaque cum assumenda delectus, sint iusto ipsam?</p>
+                        <p> Clients appreciate flexibility, especially if plans change or if they require special accommodations. The ability of the transportation service to accommodate such changes will be evaluated.</p>
+                        <div class="d-flex align-items-center gap-3 justify-content-start">
+                            <span class="d-block rounded-50 overflow-hidden" style="width: 60px; height: 60px;padding: 12px;background: #fff;border: 1px solid #929292;">
+                                <img class="img-fluid flex-shrink-0" src="assets/img/abb.png">
+                            </span>
+                            <div>
+                                <h5 class="mb-1 f17">ABB</h5>
+                                <div class="start-rating d-flex gap-1 mt-2">
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-item p-4 my-5">
+                    <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
+                    <div class="mb-4">
+                        <p> The attitude and responsiveness of staff members matter. Clients will consider how friendly, helpful, and accommodating the drivers and customer service representatives were throughout the experience.</p>
                         <div class="d-flex align-items-center gap-3 justify-content-start">
                             <span class="d-block rounded-50 overflow-hidden" style="width: 60px; height: 60px;padding: 12px;background: #fff;border: 1px solid #929292;">
                                 <img class="img-fluid flex-shrink-0" src="assets/img/c5.jpg">
@@ -588,7 +533,7 @@ INSTALLATION</a></h3>
                     <div class="bg-white text-start p-5 wow fadeIn" data-wow-delay="0.5s">
                         <h6 class="text-primary text-uppercase mb-3 f18 font-weight-400">Contact us</h6>
                         <h1 class="mb-5">Request A Free Quote!</h1>
-                        <form method="post" action="#">
+                        <form method="post" action="<?= site_url('index.php/Quote/quote_insert') ?>">
                             <div class="row g-3">
                                 <div class="col-12 col-sm-6">
                                     <input type="text" class="form-control border-0" name="company_name" placeholder="Your Company Name" style="height: 55px;" required>

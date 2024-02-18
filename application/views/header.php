@@ -62,8 +62,8 @@
                             <!-- top bar left -->
                             <div class="top-bar-left-wrapper">
                                 <ul class="topbar-menu">
-                                    <li><a href="mailto:info@mktransport.in"><i class="ion-ios-email-outline"></i> info@mktransport.in</a></li>
-                                    <li><a href="tel:+912536622907" class="d-inline-block"><i class="ion-android-call"></i> +91-253-6622907,</a> <a href="tel:+912532992734" class="d-inline-block">+91-253-2992734,</a> <a href="tel:+918600134655" class="d-inline-block">+91-8600134655</a></li>
+                                    <li><a href="mailto:info@mktransport.in"><i class="ion-ios-email-outline"></i> mktransportcompany1199@gmail.com</a></li>
+                                    <li><a href="tel:+912536622907" class="d-inline-block"><i class="ion-android-call"></i> 7588554482</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -71,7 +71,7 @@
                             <!-- top bar right -->
                             <div class="top-bar-right-wrapper">
                                 <ul class="topbar-info">
-                                    <li><i class="ion-clock"></i> Mon - Sat: 9:00 - 19:00</li>
+                                    <li><i class="ion-clock"></i> 24 Hr</li>
                                 </ul>
                             </div>
                         </div>
@@ -87,7 +87,7 @@
                             <div class="header-navigation-wrapper">
                                 <!-- logo -->
                                 <div class="logo">
-                                    <a href="index.html">
+                                    <a href="<?= site_url()?>">
                                         <img src="<?= site_url('assets/img/logo.png')?>" class="img-fluid" alt="">
                                     </a>
                                 </div>
@@ -97,10 +97,10 @@
                                     <div class="header-navigation__nav">
                                         <nav>
                                             <ul>
-                                                <li class="active"><a href="index.html">HOME</a></li>
-                                                <li><a href="<?= site_url().'index.php/frontend/about'?>">About us</a></li>
-                                                <li><a href="<?= site_url().'index.php/frontend/services'?>">Services</a></li>
-                                                <li><a href="<?= site_url().'index.php/frontend/contact';?>">Contact Us</a></li>
+                                                <li class="active"><a href="<?= site_url()?>">HOME</a></li>
+                                                <li><a href="<?= site_url().'frontend/about'?>">About us</a></li>
+                                                <li><a href="<?= site_url().'frontend/services'?>">Services</a></li>
+                                                <li><a href="<?= site_url().'frontend/contact';?>">Contact Us</a></li>
                                             </ul>
                                         </nav>
                                     </div>
@@ -116,7 +116,7 @@
                                 </div>
 
                                 <!-- header search -->
-                                <div class="header-search d-flex align-items-end justify-content-end">
+                                <!-- <div class="header-search d-flex align-items-end justify-content-end">
                                     <div class="social-links">
                                         <ul>
                                             <li><a href="#" data-tippy="Facebook" data-tippy-inertia="false" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder__yellow" data-tippy-placement="bottom"><i class="ion-social-facebook"></i></a>
@@ -130,7 +130,7 @@
                                         </ul>
                                     </div>
                                     <a href="#" class="ht-btn ht-btn--default d-inline-block text-white">GET A QUOTE</a>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -144,7 +144,6 @@
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-md-4 col-sm-6 col-5">
-                            <!-- logo -->
                             <div class="logo">
                                 <a href="index.html">
                                     <img src="<?= site_url('assets/img/logo.png') ?>" class="img-fluid" alt="">
@@ -152,7 +151,6 @@
                             </div>
                         </div>
                         <div class="col-md-8 col-sm-6 col-7">
-                            <!-- mobile menu content -->
                             <div class="mobile-menu-content">
                                 <div class="social-links d-none d-md-block">
                                     <ul>
@@ -174,7 +172,6 @@
                     </div>
                 </div>
             </div>
-            <!-- End of mobile menu -->
         </div>
     </div>
     <!--  End of header area  -->

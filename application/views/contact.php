@@ -4,7 +4,7 @@
         <div class="innerBanner">
             <img src="<?= base_url('assets/img/inner-contact-banner.jpg" alt="Services" class="img-fluid w-100')?>" />
             <div class="caption">
-                <div class="container"><h1>About os</h1></div>
+                <div class="container"><h1>About Us</h1></div>
             </div>
         </div>
     </section>
@@ -22,7 +22,10 @@
                      <div class="bg-white text-start py-0 pe-lg-5 wow fadeIn" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeIn;">
                         <h1 class="mb-2 f36">Contact Us</h1>
                         <p class="mb-5 dark-text">Do you have queries and not sure who to contact? Clients and associates, we are here to help you and revert to any concerns you might have. Please complete the form to get in touch or e-mail us at info@mktransport.in, we assure you an immediate response.</p>
-                        <form method="post" action="#">
+                        <?php if($this->session->flashdata('msg')): ?>
+                            <p style="color:green;"><?php echo $this->session->flashdata('msg'); ?></p>
+                        <?php endif; ?>
+                        <form method="post" action="<?= site_url('index.php/Quote/quote_insert') ?>">
                                 <div class="row g-3">
                                 <div class="col-12 col-sm-6">
                                         <input type="text" class="form-control border-0" name="company_name" placeholder="Your Company Name" style="height: 55px;" required="">
@@ -60,11 +63,11 @@
                                         <p><a href="#" target="_blank">MK Transport</a><br>
                                         <a href="tel:800 355 7447" target="_blank">+91 75885 54482</a></p>
                                 </li>
-				<li>
+				                <!-- <li>
                                     <span>Landline</span>
                                     <p><a href="tel:+912536622907" target="_blank">+91-253-6622907</a></p>
                                     
-                                </li>
+                                </li> -->
                                 <li>
                                     <span>Mobile</span>
                                     <!--<p><a href="tel:+971559362789" target="_blank">+971 55 936 2789</a></p>-->
@@ -76,13 +79,9 @@
                                     <p><a href="https://wa.me/+917588554482?text=Hey%20MK%20Transport%20I%20would%20like%20to%20know%20more%20about%20your%20services?" target="_blank">+91 758 855 4482</a></p>
                                 </li>
 								
-                                <!-- <li>
-                                    <span>Fax</span>
-                                    <p><a href="tel:+97143964339" target="_blank">+971 4 396 4339</a></p>
-                                </li> -->
                                 <li>
                                     <span>Send Email</span>
-                                    <p><a href="mailto:info@mktransport.in" target="_blank">info@mktransport.in</a></p>
+                                    <p><a href="mailto:info@mktransport.in" target="_blank">mktransportcompany1199@gmail.com</a></p>
                                 </li>
                                 <li>
                                     <span>Corporate Office</span>
@@ -91,15 +90,14 @@
                             </ul>
                             <div class="contact-page-details__social">
                               
-                                <a href="https://www.facebook.com/" target="_blank"><img src="<?= base_url('assets/img/facebookft.png') ?>"></a>
+                                <!-- <a href="https://www.facebook.com/" target="_blank"><img src="<?= base_url('assets/img/facebookft.png') ?>"></a> -->
                                     
-                                     <a href="https://www.instagram.com/" target="_blank"><img src="<?= base_url('assets/img/instagramft.png')?>"></a>
+                                <!-- <a href="https://www.instagram.com/" target="_blank"><img src="<?= base_url('assets/img/instagramft.png')?>"></a> -->
                                      
-                                        <a href="https://twitter.com/" target="_blank"><img src="<?= base_url('assets/img/twitterft.png')?>"></a>
+                                <!-- <a href="https://twitter.com/" target="_blank"><img src="<?= base_url('assets/img/twitterft.png')?>"></a> -->
                                         
-                                
                                  
-                                  <a href="https://wa.me/+917588554482?text=Hey%20MK%20Transport%20I%20would%20like%20to%20know%20more%20about%20your%20services?" target="_blank"><img src="<?php site_url('assets/img/whatsappft.png')?>"></a>
+                                <a href="https://wa.me/+917588554482?text=Hey%20MK%20Transport%20I%20would%20like%20to%20know%20more%20about%20your%20services?" target="_blank"><img src="<?php site_url('assets/img/whatsappft.png')?>"></a>
                                 
                             </div>
                     </div>

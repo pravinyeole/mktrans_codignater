@@ -10,6 +10,8 @@
 		}
 
 		function quote_insert(){
+			date_default_timezone_set('Asia/Karachi');
+			$now = date('Y-m-d H:i:s');
 			$data['company_name'] = $this->input->post('company_name');
 			$data['name'] = $this->input->post('name');
             $data['email']=$this->input->post('email');
@@ -17,10 +19,12 @@
             $data['to_location'] = $this->input->post('to_location');
 			$data['from_location'] = $this->input->post('from_location');
             $data['desc']=$this->input->post('desc');
+            $data['created_at']=$now;
+            $data['updated_at']=$now;
         
             $this->db->insert('qoute',$data);
-            $this->session->set_flashdata('msg', 'Thank you for sending in your quotation. We’ll be in touch');
-			redirect('index.php/frontend/contact');
+            $referred_from = $this->session->set_flashdata('msg', 'Thank you for sending in your quotation. We’ll be in touch');
+			redirect($referred_from,'frontend/contact');
 		}
 		
 	}

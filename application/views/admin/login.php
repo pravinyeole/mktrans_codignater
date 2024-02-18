@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Simple Login Form Example</title>
+    <title>MK Transport</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:400,700">
+    <link href="<?= site_url().'assets/img/logo.png';?>" rel="icon">
     <style>
         * {
   margin: 0;
@@ -118,7 +119,7 @@ body {
 <body>
     <div class="login-form">
       
-        <form action="<?php echo site_url('index.php/admin/logincheck') ?>" method="post">
+        <form action="<?php echo site_url('admin/logincheck') ?>" method="post">
             <?php  
               if(!empty($success_msg)){ 
                   echo '<p class="status-msg success">'.$success_msg.'</p>'; 

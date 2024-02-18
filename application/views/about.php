@@ -98,7 +98,7 @@
                 <div class="testimonial-item p-4 my-5">
                     <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
                     <div class="mb-4">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ea, repellat velit enim aliquid maxime non! Tempore molestias mollitia culpa blanditiis impedit dolore eaque cum assumenda delectus, sint iusto ipsam?</p>
+                        <p>Clients expect transportation services to be punctual. They will assess whether the service arrived on time for pick-up and drop-off.</p>
                         <div class="d-flex align-items-center gap-3 justify-content-start">
                             <span class="d-block rounded-50 overflow-hidden" style="width: 60px; height: 60px;padding: 12px;background: #fff;border: 1px solid #929292;">
                                 <img class="img-fluid flex-shrink-0" src="<?= site_url('assets/img/c1.jpg')?>">
@@ -119,7 +119,7 @@
                 <div class="testimonial-item p-4 my-5">
                     <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
                     <div class="mb-4">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ea, repellat velit enim aliquid maxime non! Tempore molestias mollitia culpa blanditiis impedit dolore eaque cum assumenda delectus, sint iusto ipsam?</p>
+                        <p>Safety is paramount. Clients will review the condition of the vehicles, adherence to traffic rules, and the professionalism of the drivers.</p>
                         <div class="d-flex align-items-center gap-3 justify-content-start">
                             <span class="d-block rounded-50 overflow-hidden" style="width: 60px; height: 60px;padding: 12px;background: #fff;border: 1px solid #929292;">
                                 <img class="img-fluid flex-shrink-0" src="<?= site_url('assets/img/c2.jpg')?>">
@@ -140,7 +140,7 @@
                 <div class="testimonial-item p-4 my-5">
                     <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
                     <div class="mb-4">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ea, repellat velit enim aliquid maxime non! Tempore molestias mollitia culpa blanditiis impedit dolore eaque cum assumenda delectus, sint iusto ipsam?</p>
+                        <p>The comfort level of the transportation is crucial. Clients will assess factors such as cleanliness, vehicle condition, and amenities.</p>
                         <div class="d-flex align-items-center gap-3 justify-content-start">
                             <span class="d-block rounded-50 overflow-hidden" style="width: 60px; height: 60px;padding: 12px;background: #fff;border: 1px solid #929292;">
                                 <img class="img-fluid flex-shrink-0" src="<?= site_url('assets/img/c3.jpg')?>">
@@ -179,11 +179,34 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="testimonial-item p-4 my-5">
                     <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
                     <div class="mb-4">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ea, repellat velit enim aliquid maxime non! Tempore molestias mollitia culpa blanditiis impedit dolore eaque cum assumenda delectus, sint iusto ipsam?</p>
+                        <p> Clients appreciate flexibility, especially if plans change or if they require special accommodations. The ability of the transportation service to accommodate such changes will be evaluated.</p>
+                        <?php if($this->session->flashdata('msg')): ?>
+                            <p style="color:green;"><?php echo $this->session->flashdata('msg'); ?></p>
+                        <?php endif; ?>
+                        <div class="d-flex align-items-center gap-3 justify-content-start">
+                            <span class="d-block rounded-50 overflow-hidden" style="width: 60px; height: 60px;padding: 12px;background: #fff;border: 1px solid #929292;">
+                                <img class="img-fluid flex-shrink-0" src="<?= site_url('assets/img/abb.png')?>">
+                            </span>
+                            <div>
+                                <h5 class="mb-1 f17">ABB</h5>
+                                <div class="start-rating d-flex gap-1 mt-2">
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item p-4 my-5">
+                    <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
+                    <div class="mb-4">
+                        <p>The attitude and responsiveness of staff members matter. Clients will consider how friendly, helpful, and accommodating the drivers and customer service representatives were throughout the experience.</p>
                         <div class="d-flex align-items-center gap-3 justify-content-start">
                             <span class="d-block rounded-50 overflow-hidden" style="width: 60px; height: 60px;padding: 12px;background: #fff;border: 1px solid #929292;">
                                 <img class="img-fluid flex-shrink-0" src="<?= site_url('assets/img/c5.jpg')?>">

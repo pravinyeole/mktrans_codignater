@@ -5,6 +5,8 @@
 		
 		function __construct() {
 			parent::__construct();
+			$this->load->library('session');
+        	$this->load->helper('url');
 			$this->load->library('encryption');
 			$this->load->library(array('session', 'form_validation', 'email'));
 		}
@@ -15,50 +17,72 @@
 		function logincheck(){
 			$username = $this->input->post('username');
 			$userpass = $this->input->post('password');
-			
 			if((isset($username) && $username !== null) && (isset($userpass) && $userpass !== null)){
 				
 				$data = $this->db->query("SELECT * from users where email = '".$username."' and password= md5('".$userpass."')")->result();
 				
                 if(count($data) == 1){ 
-                    $this->session->set_userdata('isUserLoggedIn', TRUE); 
-                    $this->session->set_userdata('userId', $checkLogin['id']); 
-                    redirect('admin/dashboard'); 
+                    $newdata = array(
+		               'logged_in' => TRUE
+		           	);
+					$this->session->set_userdata($newdata); 
+
+                    $this->load->view('admin/dashboard'); 
                 }else{ 
                     $data['error_msg'] = 'Wrong email or password, please try again.';
-					redirect('index.php/admin');
+					redirect('admin');
                 } 
 			}else{
 				redirect('admin');
 			}
 		}
 		function dashboard(){
-			$this->load->view('admin/dashboard');
+			if($this->session->has_userdata('logged_in')){
+				$this->load->view('admin/dashboard');
+			}else{
+				redirect('admin');
+			}
 		}
 
 		function Create_qoute(){
-			$data = $this->db->query("SELECT id,name,material_weight from vehicle_type")->result();
-			$this->load->view('admin/quotation_form',compact('data'));
+			if($this->session->has_userdata('logged_in')){
+				$data = $this->db->query("SELECT id,name,material_weight from vehicle_type")->result();
+				$this->load->view('admin/quotation_form',compact('data'));
+			}else{
+				redirect('admin');
+			}
 		}
 
 		function vehical_type(){
-			$data = $this->db->query("SELECT id,name,material_weight from vehicle_type")->result();
-			$this->load->view('admin/view_vehicle_type',compact('data'));
+			if($this->session->userdata("logged_in")){
+				$data = $this->db->query("SELECT id,name,material_weight from vehicle_type")->result();
+				$this->load->view('admin/view_vehicle_type',compact('data'));
+			}else{
+				redirect('admin');
+			}
 		}
 
 		function submit_vehical_type(){
-			$data['name'] = $this->input->post('name');
-			$data['material_weight'] = $this->input->post('material_weight');
-            $this->db->insert('vehicle_type',$data);
-            $this->session->set_flashdata('msg', 'Data Save Successfully');
-			redirect('index.php/Admin/vehical_type');
+			if($this->session->has_userdata('logged_in')){
+				$data['name'] = $this->input->post('name');
+				$data['material_weight'] = $this->input->post('material_weight');
+	            $this->db->insert('vehicle_type',$data);
+	            $this->session->set_flashdata('msg', 'Data Save Successfully');
+				redirect('Admin/vehical_type');
+			}else{
+				redirect('admin');
+			}
 		}
 
 		function vehical_type_delete(){
-			$page_id =$this->uri->segment(3);
-			$this -> db -> where('id', $page_id);
-			$this -> db -> delete('vehicle_type');
-			redirect('index.php/Admin/vehical_type');
+			if($this->session->has_userdata('logged_in')){
+				$page_id =$this->uri->segment(3);
+				$this -> db -> where('id', $page_id);
+				$this -> db -> delete('vehicle_type');
+				redirect('Admin/vehical_type');
+			}else{
+				redirect('admin');
+			}
 		}
 
 		function submit_quotation_form()
@@ -97,34 +121,43 @@
 			}
 
             $this->session->set_flashdata('msg', 'Data Save Successfully');
-			redirect('index.php/Admin/Create_qoute');
+			redirect('Admin/Create_qoute');
 		}
 
 		function quotation_list(){
-			// $data = $this->db->query("select quotation_form.*, vehicle_type.name as vehicle_type, qd.from as root1,qd.to as root2,qd.loading,qd.unloading,qd.amount from quotation_form 
-			// left join quotation_details as qd on qd.quotation_form_id = quotation_form.id 
-			// left join vehicle_type on vehicle_type.id = qd.vehical_type")->result();
-			$data = $this->db->query("select * from quotation_form Order By date Desc")->result();
+			if($this->session->has_userdata('logged_in')){
+				$data = $this->db->query("select * from quotation_form Order By date Desc")->result();
 
-			$this->load->view('admin/quotation_list',compact('data'));
+				$this->load->view('admin/quotation_list',compact('data'));
+			}else{
+				redirect('admin');
+			}
 		}
 		function view_quotation(){
-			$page_id =$this->uri->segment(3);
-			$data = $this->db->query("select * from quotation_form where quotation_form.id = $page_id")->result();
-			$data1 = $this->db->query("select vehicle_type.name as vehicle_type,vehicle_type.material_weight, qd.from as root1,qd.to as root2,qd.loading,qd.unloading,qd.amount from quotation_form 
-			left join quotation_details as qd on qd.quotation_form_id = quotation_form.id 
-			left join vehicle_type on vehicle_type.id = qd.vehical_type where quotation_form.id = $page_id")->result();
-			
-			$this->pdf->load_view('admin/quotation',compact('data','data1'));
-			$this->pdf->render();
-			ob_end_clean();
-			$this->pdf->stream($data[0]->company_name.".pdf");
-			
-			$this->load->view('admin/quotation',compact('data','data1'));
+			if($this->session->has_userdata('logged_in')){
+				$page_id =$this->uri->segment(3);
+				$data = $this->db->query("select * from quotation_form where quotation_form.id = $page_id")->result();
+				$data1 = $this->db->query("select vehicle_type.name as vehicle_type,vehicle_type.material_weight, qd.from as root1,qd.to as root2,qd.loading,qd.unloading,qd.amount from quotation_form 
+				left join quotation_details as qd on qd.quotation_form_id = quotation_form.id 
+				left join vehicle_type on vehicle_type.id = qd.vehical_type where quotation_form.id = $page_id")->result();
+				
+				$this->pdf->load_view('admin/quotation',compact('data','data1'));
+				$this->pdf->render();
+				ob_end_clean();
+				$this->pdf->stream($data[0]->company_name.".pdf");
+				
+				$this->load->view('admin/quotation',compact('data','data1'));
+			}else{
+				redirect('admin');
+			}
 		}
 		function Create_invoice(){
-			$data = $this->db->query("SELECT id,name,material_weight from vehicle_type")->result();
-			$this->load->view('admin/invoice_form',compact('data'));
+			if($this->session->has_userdata('logged_in')){
+				$data = $this->db->query("SELECT id,name,material_weight from vehicle_type")->result();
+				$this->load->view('admin/invoice_form',compact('data'));
+			}else{
+				redirect('admin');
+			}
 		}
 
 		function submit_invoice_form()
@@ -149,50 +182,79 @@
             $ids = $this->db->insert('invoice_form',$data);
 
             $this->session->set_flashdata('msg', 'Data Save Successfully');
-			redirect('index.php/Admin/Create_invoice');
+			redirect('Admin/Create_invoice');
 		}
 
 		function invoice_list(){
-			$data = $this->db->query("select * from invoice_form where is_delete ='1' Order By date Desc")->result();
-			$status = 'active';
-			$this->load->view('admin/invoice_list',compact('data','status'));
+			if($this->session->has_userdata('logged_in')){
+				$data = $this->db->query("select * from invoice_form where is_delete ='1' Order By date Desc")->result();
+				$status = 'active';
+				$this->load->view('admin/invoice_list',compact('data','status'));
+			}else{
+				redirect('admin');
+			}
+
 		}
 		function invoice_list_inactive(){
-			$data = $this->db->query("select * from invoice_form where is_delete ='0' Order By date Desc")->result();
-			$status = 'inactive';
-			$this->load->view('admin/invoice_list',compact('data','status'));
+			if($this->session->has_userdata('logged_in')){
+				$data = $this->db->query("select * from invoice_form where is_delete ='0' Order By date Desc")->result();
+				$status = 'inactive';
+				$this->load->view('admin/invoice_list',compact('data','status'));
+			}else{
+				redirect('admin');
+			}
+
 		}
 		
 
 		function invoice_pdf(){
-
-			$this->load->view('admin/invoice');
+			if($this->session->has_userdata('logged_in')){
+				$this->load->view('admin/invoice');
+			}else{
+				redirect('admin');
+			}
+			
 		}
 
 		function delete_invoice(){
-			$page_id =$this->uri->segment(3);
-			$data = $this->db->query("Update invoice_form SET is_delete='0' Where id=$page_id");
+			if($this->session->has_userdata('logged_in')){
+				$page_id =$this->uri->segment(3);
+				$data = $this->db->query("Update invoice_form SET is_delete='0' Where id=$page_id");
 
-			redirect('index.php/Admin/invoice_list');
+				redirect('Admin/invoice_list');
+			}else{
+				redirect('admin');
+			}
+
 		}
 
 		function view_invoice(){
-			$page_id =$this->uri->segment(3);
-			$data = $this->db->query("select *,vehicle_type.* from invoice_form Left join vehicle_type on vehicle_type.id = invoice_form.vehical_type where invoice_form.id = $page_id")->result();
-			
+			if($this->session->has_userdata('logged_in')){
+				$page_id =$this->uri->segment(3);
+				$data = $this->db->query("select *,vehicle_type.* from invoice_form Left join vehicle_type on vehicle_type.id = invoice_form.vehical_type where invoice_form.id = $page_id")->result();
+				
 
-			ob_start();
-			$this->pdf->load_view('admin/invoice',compact('data'));
-			$this->pdf->render();
-			ob_end_clean();
-			$this->pdf->stream($data[0]->company_name.".pdf");
+				ob_start();
+				$this->pdf->load_view('admin/invoice',compact('data'));
+				$this->pdf->render();
+				ob_end_clean();
+				$this->pdf->stream($data[0]->company_name.".pdf");
+				
+				$this->load->view('admin/invoice',compact('data'));
+			}else{
+				redirect('admin');
+			}
 			
-			$this->load->view('admin/invoice',compact('data'));
 		}
 
 		function Create_lr(){
-			$data = $this->db->query("SELECT id,name,material_weight from vehicle_type")->result();
-			$this->load->view('admin/lr',compact('data'));
+			if($this->session->has_userdata('logged_in')){
+				$data = $this->db->query("SELECT id,name,material_weight from vehicle_type")->result();
+				$this->load->view('admin/lr',compact('data'));
+			}else{
+				redirect('admin');
+			}
+
 		}
 
 		function submit_lr_form()
@@ -252,26 +314,36 @@
 			}
 
             $this->session->set_flashdata('msg', 'Data Save Successfully');
-			redirect('index.php/Admin/Create_lr');
+			redirect('Admin/Create_lr');
 		}
 
 		function lr_list(){
-			$data = $this->db->query("select * from lr_form Order By invoice_date Desc")->result();
+			if($this->session->has_userdata('logged_in')){
+				$data = $this->db->query("select * from lr_form Order By invoice_date Desc")->result();
 
-			$this->load->view('admin/lr_list',compact('data'));
+				$this->load->view('admin/lr_list',compact('data'));
+			}else{
+				redirect('admin');
+			}
+
 		}
 
 		function view_lr(){
-			$page_id =$this->uri->segment(3);
-			$data = $this->db->query("select *,lr_details.* from lr_form Left join lr_details on lr_details.lr_id = lr_form.id where lr_form.id = $page_id")->result();
-			
-			ob_start();
-			$this->pdf->load_view('admin/lr_pdf',compact('data'));
-			$this->pdf->render();
-			ob_end_clean();
-			$this->pdf->stream($data[0]->consignor_name.".pdf");
-			
-			$this->load->view('admin/lr_pdf',compact('data'));
+			if($this->session->has_userdata('logged_in')){
+				$page_id =$this->uri->segment(3);
+				$data = $this->db->query("select *,lr_details.* from lr_form Left join lr_details on lr_details.lr_id = lr_form.id where lr_form.id = $page_id")->result();
+				
+				ob_start();
+				$this->pdf->load_view('admin/lr_pdf',compact('data'));
+				$this->pdf->render();
+				ob_end_clean();
+				$this->pdf->stream($data[0]->consignor_name.".pdf");
+				
+				$this->load->view('admin/lr_pdf',compact('data'));
+			}else{
+				redirect('admin');
+			}
+
 		}
 
 		function logout()
@@ -283,12 +355,26 @@
 					}
 				}
 			$this->session->sess_destroy();
-			redirect('index.php/admin');
+			redirect('admin');
 		}
 
 		function Create_Stock(){
-			$data = $this->db->query("SELECT id,name,material_weight from vehicle_type")->result();
-			$this->load->view('admin/stock',compact('data'));
+			if($this->session->has_userdata('logged_in')){
+				$data = $this->db->query("SELECT id,name,material_weight from vehicle_type")->result();
+				$this->load->view('admin/stock',compact('data'));
+			}else{
+				redirect('admin');
+			}
+
 		}
 
+		function quotation_list_website(){
+			if($this->session->has_userdata('logged_in')){
+				$data = $this->db->query("select * from qoute Order By id Desc")->result();
+				return $this->load->view('admin/quotation_list_website',compact('data'));
+			}else{
+				redirect('admin');
+			}
+
+		}
 	}
